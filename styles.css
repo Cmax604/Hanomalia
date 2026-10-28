@@ -4,4 +4,4 @@
 @media(max-width:380px){.people-grid{grid-template-columns:1fr}.contact h2{font-size:34px}.hero-genre{letter-spacing:3px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
-.hero-wordmark{max-height:340px;object-fit:contain}.group-intro{padding-top:65px}.group-intro h1{font-size:clamp(38px,5vw,66px);line-height:1.15;letter-spacing:-2px;margin-bottom:0}.group-actions{display:flex;align-items:center;gap:30px;padding-block:45px 80px}@media(max-width:700px){.hero-wordmark{max-height:260px}.group-intro{padding-top:40px}.group-intro h1{font-size:40px}.group-actions{align-items:flex-start;flex-direction:column;gap:25px;padding-block:35px 55px}}
+.hero-wordmark{max-height:410px;object-fit:contain}.group-intro{padding-top:65px}.group-intro h1{font-size:clamp(38px,5vw,66px);line-height:1.15;letter-spacing:-2px;margin-bottom:0}.group-actions{display:flex;align-items:center;gap:30px;padding-block:45px 80px}@media(max-width:700px){.hero-wordmark{max-height:260px}.group-intro{padding-top:40px}.group-intro h1{font-size:40px}.group-actions{align-items:flex-start;flex-direction:column;gap:25px;padding-block:35px 55px}}

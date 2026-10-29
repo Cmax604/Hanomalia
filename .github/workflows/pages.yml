@@ -22,7 +22,7 @@ jobs:
       - name: Préparer les fichiers publics
         run: |
           mkdir _site
-          cp index.html groupe.html membres.html live.html styles.css membres.css script.js _site/
+          cp index.html groupe.html membres.html live.html merch.html galerie.html styles.css membres.css collections.css collections-data.js collections.js script.js _site/
           cp -r assets _site/assets
       - uses: actions/upload-pages-artifact@v4
         with:

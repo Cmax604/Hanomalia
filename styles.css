@@ -20,5 +20,5 @@
 
 /* Decorative half-logo, fixed to the right edge throughout the home page. */
 .site-shadow{position:fixed;inset:0;z-index:5;pointer-events:none;overflow:hidden;mix-blend-mode:screen}
-.site-shadow::before{content:"";position:absolute;top:0;right:0;width:144vh;height:100%;transform:translateX(50%);background:#4b1118db;opacity:.075;-webkit-mask:url('assets/skull-original.png') center/contain no-repeat;mask:url('assets/skull-original.png') center/contain no-repeat}
+.site-shadow::before{content:"";position:absolute;top:0;right:0;width:144vh;height:100%;transform:translateX(50%);background:#a7626bd6;opacity:.075;-webkit-mask:url('assets/skull-original.png') center/contain no-repeat;mask:url('assets/skull-original.png') center/contain no-repeat}
 @media(max-width:700px){.site-shadow::before{width:144svh;opacity:.05}}

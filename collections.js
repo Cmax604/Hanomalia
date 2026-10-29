@@ -23,7 +23,7 @@ if(grid){
 }
 const albumsRoot=document.getElementById('gallery-albums');
 if(!albumsRoot)return;
-const albums=(Array.isArray(data.albums)?data.albums:[]).slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+const albums=(Array.isArray(data.albums)?data.albums:[]).slice().sort((a,b)=>(b.date||b.dateLabel||'').localeCompare(a.date||a.dateLabel||''));
 const filter=document.getElementById('album-filter');
 const viewer=document.getElementById('photo-viewer'),viewerImage=document.getElementById('viewer-image');
 let currentPhotos=[],currentIndex=0,lastTrigger=null;

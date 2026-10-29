@@ -31,15 +31,16 @@ function displayPhoto(){const p=currentPhotos[currentIndex];viewerImage.src=p.sr
 function step(delta){if(currentPhotos.length){currentIndex=(currentIndex+delta+currentPhotos.length)%currentPhotos.length;displayPhoto()}}
 albums.forEach((album,index)=>{
  const photos=(album.photos||[]).filter(p=>p.src&&safeUrl(p.src));
- if(!photos.length)return;
+ 
  const section=el('section','photo-album');section.id='album-'+index;
  const heading=el('div','album-heading'),text=el('div');
- if(album.date){const date=el('time','album-date',new Intl.DateTimeFormat('fr-FR',{day:'numeric',month:'long',year:'numeric'}).format(new Date(album.date+'T12:00:00')));date.dateTime=album.date;text.append(date)}
+ if(album.date){const date=el('time','album-date',new Intl.DateTimeFormat('fr-FR',{day:'numeric',month:'long',year:'numeric'}).format(new Date(album.date+'T12:00:00')));date.dateTime=album.date;text.append(date)}else if(album.dateLabel){text.append(el('p','album-date',album.dateLabel))}
  const h=el('h2','',album.title);h.id='album-title-'+index;section.setAttribute('aria-labelledby',h.id);text.append(h);
  if(album.preview)text.append(el('p','album-subtitle','Sélection de prévisualisation — dates et événements à renseigner.'));
  else if(album.location)text.append(el('p','album-subtitle',album.location));
- heading.append(text,el('span','album-count',photos.length+' photo'+(photos.length>1?'s':'')));section.append(heading);
+ heading.append(text,el('span','album-count',photos.length?photos.length+' photo'+(photos.length>1?'s':''):'Photos à venir'));section.append(heading);
  const mosaic=el('div','photo-mosaic');
+ if(!photos.length){mosaic.classList.add('mosaic-empty');for(let i=0;i<3;i++){const placeholder=el('div','empty-photo');placeholder.setAttribute('aria-hidden','true');mosaic.append(placeholder)}const message=el('p','empty-album-message','Les photos arrivent bientôt.');mosaic.append(message)}
  photos.forEach((photo,photoIndex)=>{const button=el('button','gallery-photo');button.type='button';button.setAttribute('aria-label','Agrandir : '+(photo.alt||album.title));const img=el('img');img.src=photo.src;img.alt=photo.alt||'';img.loading='lazy';button.append(img);const icon=el('span','photo-expand','↗');icon.setAttribute('aria-hidden','true');button.append(icon);button.addEventListener('click',()=>{currentPhotos=photos;currentIndex=photoIndex;lastTrigger=button;document.getElementById('viewer-album').textContent=album.title;displayPhoto();viewer.showModal()});mosaic.append(button)});
  section.append(mosaic);albumsRoot.append(section);const option=el('option','',album.title);option.value=section.id;filter.append(option);
 });

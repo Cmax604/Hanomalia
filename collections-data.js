@@ -178,84 +178,83 @@ window.HANOMALIA_COLLECTIONS = {
 },
     {
   "title": "Fête de la musique 2026",
-  "date": null,
-  "dateLabel": "2026",
+  "date": "2026-06-21",
   "location": "",
   "photos": [
     {
       "src": "assets/fdlm26-01.webp",
       "alt": "HANOMALIA à la Fête de la musique 2026 — photo 1",
-      "caption": "HANOMALIA · Fête de la musique 2026"
+      "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
     },
     {
       "src": "assets/fdlm26-02.webp",
       "alt": "HANOMALIA à la Fête de la musique 2026 — photo 2",
-      "caption": "HANOMALIA · Fête de la musique 2026"
+      "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
     },
     {
       "src": "assets/fdlm26-03.webp",
       "alt": "HANOMALIA à la Fête de la musique 2026 — photo 3",
-      "caption": "HANOMALIA · Fête de la musique 2026"
+      "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
     },
     {
       "src": "assets/fdlm26-04.webp",
       "alt": "HANOMALIA à la Fête de la musique 2026 — photo 4",
-      "caption": "HANOMALIA · Fête de la musique 2026"
+      "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
     },
     {
       "src": "assets/fdlm26-05.webp",
       "alt": "HANOMALIA à la Fête de la musique 2026 — photo 5",
-      "caption": "HANOMALIA · Fête de la musique 2026"
+      "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
     },
     {
       "src": "assets/fdlm26-06.webp",
       "alt": "HANOMALIA à la Fête de la musique 2026 — photo 6",
-      "caption": "HANOMALIA · Fête de la musique 2026"
+      "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
     },
     {
       "src": "assets/fdlm26-07.webp",
       "alt": "HANOMALIA à la Fête de la musique 2026 — photo 7",
-      "caption": "HANOMALIA · Fête de la musique 2026"
+      "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
     },
     {
       "src": "assets/fdlm26-08.webp",
       "alt": "HANOMALIA à la Fête de la musique 2026 — photo 8",
-      "caption": "HANOMALIA · Fête de la musique 2026"
+      "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
     },
     {
       "src": "assets/fdlm26-09.webp",
       "alt": "HANOMALIA à la Fête de la musique 2026 — photo 9",
-      "caption": "HANOMALIA · Fête de la musique 2026"
+      "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
     },
     {
       "src": "assets/fdlm26-10.webp",
       "alt": "HANOMALIA à la Fête de la musique 2026 — photo 10",
-      "caption": "HANOMALIA · Fête de la musique 2026"
+      "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
     },
     {
       "src": "assets/fdlm26-11.webp",
       "alt": "HANOMALIA à la Fête de la musique 2026 — photo 11",
-      "caption": "HANOMALIA · Fête de la musique 2026"
+      "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
     },
     {
       "src": "assets/fdlm26-12.webp",
       "alt": "HANOMALIA à la Fête de la musique 2026 — photo 12",
-      "caption": "HANOMALIA · Fête de la musique 2026"
+      "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
     },
     {
       "src": "assets/fdlm26-13.webp",
       "alt": "HANOMALIA à la Fête de la musique 2026 — photo 13",
-      "caption": "HANOMALIA · Fête de la musique 2026"
+      "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
     },
     {
       "src": "assets/fdlm26-14.webp",
       "alt": "HANOMALIA à la Fête de la musique 2026 — photo 14",
-      "caption": "HANOMALIA · Fête de la musique 2026"
+      "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
     },
     {
       "src": "assets/fdlm26-15.webp",
       "alt": "HANOMALIA à la Fête de la musique 2026 — photo 15",
-      "caption": "HANOMALIA · Fête de la musique 2026"
+      "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
     }
   ]
 }

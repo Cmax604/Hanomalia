@@ -42,11 +42,7 @@ window.HANOMALIA_COLLECTIONS = {
       "alt": "Le chant au WARPZONE — concert WARPZONE du 27 juin 2025",
       "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
     },
-    {
-      "src": "assets/warpzone-06.webp",
-      "alt": "Guitare au premier plan — concert WARPZONE du 27 juin 2025",
-      "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
-    },
+    
     {
       "src": "assets/warpzone-07.webp",
       "alt": "Le public au contact du groupe — concert WARPZONE du 27 juin 2025",

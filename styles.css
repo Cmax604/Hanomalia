@@ -30,3 +30,6 @@
 .site-header nav{display:none;position:absolute;top:86px;left:28px;right:28px;padding:26px;border:1px solid #ffffff1f;border-radius:18px;background:#100b10f7;backdrop-filter:blur(20px);flex-direction:column;align-items:flex-start;gap:24px}
 .site-header nav.open{display:flex}
 }
+
+cms-text{white-space:pre-line}
+.hero{background-image:var(--cms-smoke,url('assets/fumee-rouge.jpg'))}.contact-panel{background-image:linear-gradient(115deg,#210c14dd,#0c080dd9),var(--cms-smoke,url('assets/fumee-rouge.jpg'))}.site-shadow::before{-webkit-mask-image:var(--cms-shadow,url('assets/skull-original.png'));mask-image:var(--cms-shadow,url('assets/skull-original.png'))}

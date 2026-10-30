@@ -19,11 +19,14 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: actions/configure-pages@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Vérifier les contenus et l’administration
+        run: node --test tests/admin.test.mjs
       - name: Préparer les fichiers publics
         run: |
-          mkdir _site
-          cp index.html groupe.html membres.html live.html merch.html galerie.html styles.css membres.css collections.css collections-data.js collections.js script.js _site/
-          cp -r assets _site/assets
+          node scripts/build-site.mjs
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site

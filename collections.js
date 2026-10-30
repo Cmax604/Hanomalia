@@ -1,10 +1,10 @@
 (() => {
 const data=window.HANOMALIA_COLLECTIONS||{merch:[],albums:[]};
 const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node};
-const safeUrl=(value)=>{try{const u=new URL(value,location.href);return ['http:','https:'].includes(u.protocol)?u.href:null}catch{return null}};
+const safeUrl=(value)=>{try{const u=new URL(value,location.href);return (['http:','https:'].includes(u.protocol)||(new URLSearchParams(location.search).get('cms-preview')==='1'&&window.parent!==window&&u.protocol==='blob:'&&u.origin===location.origin))?u.href:null}catch{return null}};
 const grid=document.getElementById('merch-grid');
 if(grid){
- const products=Array.isArray(data.merch)?data.merch:[];
+ const products=Array.isArray(data.merch)?data.merch.filter(product=>product.published!==false):[];
  document.getElementById('merch-note').hidden=products.length>0;
  const entries=products.length?products:[1,2,3].map(i=>({name:'Article '+String(i).padStart(2,'0'),category:'À venir',description:'Nom, prix et tailles à renseigner.',placeholder:true,index:i}));
  for(const product of entries){
@@ -17,13 +17,13 @@ if(grid){
   if(product.description)card.append(el('p','product-description',product.description));
   if(product.sizes?.length)card.append(el('p','product-sizes','Tailles : '+product.sizes.join(' / ')));
   const orderUrl=product.orderUrl&&safeUrl(product.orderUrl);
-  if(orderUrl){const link=el('a','pill light','Commander ↗');link.href=orderUrl;link.target='_blank';link.rel='noopener noreferrer';card.append(link)}
+  if(product.available===false)card.append(el('p','product-sizes','Indisponible')); if(orderUrl&&product.available!==false){const link=el('a','pill light','Commander ↗');link.href=orderUrl;link.target='_blank';link.rel='noopener noreferrer';card.append(link)}
   grid.append(card);
  }
 }
 const albumsRoot=document.getElementById('gallery-albums');
 if(!albumsRoot)return;
-const albums=(Array.isArray(data.albums)?data.albums:[]).slice().sort((a,b)=>(b.date||b.dateLabel||'').localeCompare(a.date||a.dateLabel||''));
+const albums=(Array.isArray(data.albums)?data.albums:[]).filter(album=>album.published!==false).slice().sort((a,b)=>(b.date||b.dateLabel||'').localeCompare(a.date||a.dateLabel||''));
 const filter=document.getElementById('album-filter');
 const viewer=document.getElementById('photo-viewer'),viewerImage=document.getElementById('viewer-image');
 let currentPhotos=[],currentIndex=0,lastTrigger=null;

@@ -1,0 +1,2108 @@
+{
+  "version": 1,
+  "pages": {
+    "index.html": {
+      "label": "Accueil",
+      "fields": [
+        {
+          "id": "link-001",
+          "type": "url",
+          "label": "Destination · HANOMALIA, accueil",
+          "group": "Navigation",
+          "value": "index.html"
+        },
+        {
+          "id": "image-002",
+          "type": "image",
+          "label": "HANOMALIA",
+          "group": "Navigation",
+          "value": "assets/logo-horizontal-blanc.png",
+          "alt": "HANOMALIA"
+        },
+        {
+          "id": "text-003",
+          "type": "text",
+          "label": "Texte · Menu",
+          "group": "Navigation",
+          "value": "Menu"
+        },
+        {
+          "id": "text-004",
+          "type": "text",
+          "label": "Lien · Accueil",
+          "group": "Navigation",
+          "value": "Accueil"
+        },
+        {
+          "id": "text-005",
+          "type": "text",
+          "label": "Lien · Nos titres",
+          "group": "Navigation",
+          "value": "Nos titres"
+        },
+        {
+          "id": "link-006",
+          "type": "url",
+          "label": "Destination · Nos titres",
+          "group": "Navigation",
+          "value": "live.html"
+        },
+        {
+          "id": "text-007",
+          "type": "text",
+          "label": "Lien · Le Groupe",
+          "group": "Navigation",
+          "value": "Le Groupe"
+        },
+        {
+          "id": "link-008",
+          "type": "url",
+          "label": "Destination · Le Groupe",
+          "group": "Navigation",
+          "value": "groupe.html"
+        },
+        {
+          "id": "text-009",
+          "type": "text",
+          "label": "Lien · Membres",
+          "group": "Navigation",
+          "value": "Membres"
+        },
+        {
+          "id": "link-010",
+          "type": "url",
+          "label": "Destination · Membres",
+          "group": "Navigation",
+          "value": "membres.html"
+        },
+        {
+          "id": "text-011",
+          "type": "text",
+          "label": "Lien · Galerie",
+          "group": "Navigation",
+          "value": "Galerie"
+        },
+        {
+          "id": "link-012",
+          "type": "url",
+          "label": "Destination · Galerie",
+          "group": "Navigation",
+          "value": "galerie.html"
+        },
+        {
+          "id": "text-013",
+          "type": "text",
+          "label": "Lien · Nous contacter",
+          "group": "Navigation",
+          "value": "Nous contacter"
+        },
+        {
+          "id": "image-014",
+          "type": "image",
+          "label": "HANOMALIA",
+          "group": "Hero title",
+          "value": "assets/logo-horizontal-blanc.png",
+          "alt": "HANOMALIA"
+        },
+        {
+          "id": "text-015",
+          "type": "text",
+          "label": "Texte · HEAVY",
+          "group": "Présentation",
+          "value": "HEAVY"
+        },
+        {
+          "id": "text-016",
+          "type": "text",
+          "label": "Texte · HARDCORE",
+          "group": "Présentation",
+          "value": "HARDCORE"
+        },
+        {
+          "id": "text-017",
+          "type": "text",
+          "label": "Lien · Écouter le groupe",
+          "group": "Présentation",
+          "value": "Écouter le groupe"
+        },
+        {
+          "id": "link-018",
+          "type": "url",
+          "label": "Destination · ▶ Écouter le groupe ↗",
+          "group": "Présentation",
+          "value": "https://linktr.ee/hanomalia"
+        },
+        {
+          "id": "text-019",
+          "type": "text",
+          "label": "Texte · LE SON BRUT D’AMIENS",
+          "group": "Présentation",
+          "value": "LE SON BRUT D’AMIENS"
+        },
+        {
+          "id": "text-020",
+          "type": "text",
+          "label": "Lien · Explorer",
+          "group": "Présentation",
+          "value": "Explorer"
+        },
+        {
+          "id": "text-021",
+          "type": "text",
+          "label": "Texte · RAGE / FORCE / BRUTAL",
+          "group": "Présentation",
+          "value": "RAGE / FORCE / BRUTAL"
+        },
+        {
+          "id": "image-022",
+          "type": "image",
+          "label": "Image",
+          "group": "Présentation",
+          "value": "assets/hanomalie-pochette.png",
+          "alt": ""
+        },
+        {
+          "id": "text-023",
+          "type": "text",
+          "label": "Texte · À L’ÉCOUTE",
+          "group": "Présentation",
+          "value": "À L’ÉCOUTE"
+        },
+        {
+          "id": "text-024",
+          "type": "text",
+          "label": "Titre · Notre premier single",
+          "group": "Présentation",
+          "value": "Notre premier single"
+        },
+        {
+          "id": "text-025",
+          "type": "text",
+          "label": "Texte · Entrer dans l’anomalie",
+          "group": "Présentation",
+          "value": "Entrer dans l’anomalie"
+        },
+        {
+          "id": "link-026",
+          "type": "url",
+          "label": "Destination · SUR SCÈNEPlus près. Plus fort.Découvrir nos titres↗",
+          "group": "Présentation",
+          "value": "live.html"
+        },
+        {
+          "id": "image-027",
+          "type": "image",
+          "label": "Image",
+          "group": "Présentation",
+          "value": "assets/concert-original.webp",
+          "alt": ""
+        },
+        {
+          "id": "text-028",
+          "type": "text",
+          "label": "Texte · SUR SCÈNE",
+          "group": "Présentation",
+          "value": "SUR SCÈNE"
+        },
+        {
+          "id": "text-029",
+          "type": "text",
+          "label": "Titre · Plus près. Plus fort.",
+          "group": "Présentation",
+          "value": "Plus près. Plus fort."
+        },
+        {
+          "id": "text-030",
+          "type": "text",
+          "label": "Texte · Découvrir nos titres",
+          "group": "Présentation",
+          "value": "Découvrir nos titres"
+        },
+        {
+          "id": "link-031",
+          "type": "url",
+          "label": "Destination · LE GROUPEQuatre. Sans compromis.Qui sommes-nous ?↗",
+          "group": "Présentation",
+          "value": "membres.html"
+        },
+        {
+          "id": "image-032",
+          "type": "image",
+          "label": "Image",
+          "group": "Présentation",
+          "value": "assets/groupe-hd.jpg",
+          "alt": ""
+        },
+        {
+          "id": "text-033",
+          "type": "text",
+          "label": "Texte · LE GROUPE",
+          "group": "Présentation",
+          "value": "LE GROUPE"
+        },
+        {
+          "id": "text-034",
+          "type": "text",
+          "label": "Titre · Quatre. Sans compromis.",
+          "group": "Présentation",
+          "value": "Quatre. Sans compromis."
+        },
+        {
+          "id": "text-035",
+          "type": "text",
+          "label": "Texte · Qui sommes-nous ?",
+          "group": "Présentation",
+          "value": "Qui sommes-nous ?"
+        },
+        {
+          "id": "text-036",
+          "type": "text",
+          "label": "Texte · 01 / MUSIQUE",
+          "group": "Musique",
+          "value": "01 / MUSIQUE"
+        },
+        {
+          "id": "text-037",
+          "type": "text",
+          "label": "Titre · Le bruit commence ici",
+          "group": "Musique",
+          "value": "Le bruit commence ici"
+        },
+        {
+          "id": "text-038",
+          "type": "text",
+          "label": "Lien · Tous nos liens ↗",
+          "group": "Musique",
+          "value": "Tous nos liens ↗"
+        },
+        {
+          "id": "link-039",
+          "type": "url",
+          "label": "Destination · Tous nos liens ↗",
+          "group": "Musique",
+          "value": "https://linktr.ee/hanomalia"
+        },
+        {
+          "id": "link-040",
+          "type": "url",
+          "label": "Destination · ▶",
+          "group": "Musique",
+          "value": "https://linktr.ee/hanomalia"
+        },
+        {
+          "id": "image-041",
+          "type": "image",
+          "label": "Pochette Hanomalie — HANOMALIA",
+          "group": "Musique",
+          "value": "assets/hanomalie-pochette.png",
+          "alt": "Pochette Hanomalie — HANOMALIA"
+        },
+        {
+          "id": "text-042",
+          "type": "text",
+          "label": "Texte · PREMIER SINGLE",
+          "group": "Musique",
+          "value": "PREMIER SINGLE"
+        },
+        {
+          "id": "text-043",
+          "type": "text",
+          "label": "Titre · Notre",
+          "group": "Musique",
+          "value": "Notre"
+        },
+        {
+          "id": "text-044",
+          "type": "text",
+          "label": "Titre · premier single",
+          "group": "Musique",
+          "value": "premier single"
+        },
+        {
+          "id": "text-045",
+          "type": "text",
+          "label": "Texte · Notre premier single est enfin disponible ! Retrouve notre musique et ",
+          "group": "Musique",
+          "value": "Notre premier single est enfin disponible ! Retrouve notre musique et choisis ta plateforme d’écoute sur nos liens officiels."
+        },
+        {
+          "id": "text-046",
+          "type": "text",
+          "label": "Lien · Écouter HANOMALIA",
+          "group": "Musique",
+          "value": "Écouter HANOMALIA"
+        },
+        {
+          "id": "link-047",
+          "type": "url",
+          "label": "Destination · Écouter HANOMALIA ↗",
+          "group": "Musique",
+          "value": "https://linktr.ee/hanomalia"
+        },
+        {
+          "id": "text-048",
+          "type": "text",
+          "label": "Texte · À ÉCOUTER À FOND.",
+          "group": "Musique",
+          "value": "À ÉCOUTER À FOND."
+        },
+        {
+          "id": "text-049",
+          "type": "text",
+          "label": "Texte · 02 / LIVE",
+          "group": "Live",
+          "value": "02 / LIVE"
+        },
+        {
+          "id": "text-050",
+          "type": "text",
+          "label": "Titre · Ça se vit. Ça se partage",
+          "group": "Live",
+          "value": "Ça se vit. Ça se partage"
+        },
+        {
+          "id": "text-051",
+          "type": "text",
+          "label": "Texte · ON SE VOIT DANS LA FOSSE.",
+          "group": "Live",
+          "value": "ON SE VOIT DANS LA FOSSE."
+        },
+        {
+          "id": "image-052",
+          "type": "image",
+          "label": "HANOMALIA et son public en concert",
+          "group": "Live",
+          "value": "assets/concert-original.webp",
+          "alt": "HANOMALIA et son public en concert"
+        },
+        {
+          "id": "text-053",
+          "type": "text",
+          "label": "Texte · L’ÉNERGIE DU LIVE",
+          "group": "Live",
+          "value": "L’ÉNERGIE DU LIVE"
+        },
+        {
+          "id": "text-054",
+          "type": "text",
+          "label": "Titre · La scène comme",
+          "group": "Live",
+          "value": "La scène comme"
+        },
+        {
+          "id": "text-055",
+          "type": "text",
+          "label": "Titre · point de rencontre",
+          "group": "Live",
+          "value": "point de rencontre"
+        },
+        {
+          "id": "text-056",
+          "type": "text",
+          "label": "Texte · Les annonces de concerts et les nouvelles du groupe sont sur notre Ins",
+          "group": "Live",
+          "value": "Les annonces de concerts et les nouvelles du groupe sont sur notre Instagram !"
+        },
+        {
+          "id": "text-057",
+          "type": "text",
+          "label": "Lien · Suivre les prochaines dates",
+          "group": "Live",
+          "value": "Suivre les prochaines dates"
+        },
+        {
+          "id": "link-058",
+          "type": "url",
+          "label": "Destination · Suivre les prochaines dates ↗",
+          "group": "Live",
+          "value": "https://www.instagram.com/hanomalia_band/"
+        },
+        {
+          "id": "text-059",
+          "type": "text",
+          "label": "Texte · Une scène à faire trembler ?",
+          "group": "Live",
+          "value": "Une scène à faire trembler ?"
+        },
+        {
+          "id": "text-060",
+          "type": "text",
+          "label": "Lien · Parlons programmation ↗",
+          "group": "Live",
+          "value": "Parlons programmation ↗"
+        },
+        {
+          "id": "link-061",
+          "type": "url",
+          "label": "Destination · Parlons programmation ↗",
+          "group": "Live",
+          "value": "mailto:hanomalia4@gmail.com?subject=Booking%20HANOMALIA"
+        },
+        {
+          "id": "text-062",
+          "type": "text",
+          "label": "Texte · 04 / CONTACT & BOOKING",
+          "group": "Contact",
+          "value": "04 / CONTACT & BOOKING"
+        },
+        {
+          "id": "text-063",
+          "type": "text",
+          "label": "Titre · Contactez-nous ici",
+          "group": "Contact",
+          "value": "Contactez-nous ici"
+        },
+        {
+          "id": "text-064",
+          "type": "text",
+          "label": "Lien · hanomalia4@gmail.com",
+          "group": "Contact",
+          "value": "hanomalia4@gmail.com"
+        },
+        {
+          "id": "link-065",
+          "type": "url",
+          "label": "Destination · hanomalia4@gmail.com ↗",
+          "group": "Contact",
+          "value": "mailto:hanomalia4@gmail.com"
+        },
+        {
+          "id": "text-066",
+          "type": "text",
+          "label": "Texte · Concerts · Programmation · Presse",
+          "group": "Contact",
+          "value": "Concerts · Programmation · Presse"
+        },
+        {
+          "id": "text-067",
+          "type": "text",
+          "label": "Lien · Instagram ↗",
+          "group": "Contact",
+          "value": "Instagram ↗"
+        },
+        {
+          "id": "link-068",
+          "type": "url",
+          "label": "Destination · Instagram ↗",
+          "group": "Contact",
+          "value": "https://www.instagram.com/hanomalia_band/"
+        },
+        {
+          "id": "text-069",
+          "type": "text",
+          "label": "Lien · Tous nos liens ↗",
+          "group": "Contact",
+          "value": "Tous nos liens ↗"
+        },
+        {
+          "id": "link-070",
+          "type": "url",
+          "label": "Destination · Tous nos liens ↗",
+          "group": "Contact",
+          "value": "https://linktr.ee/hanomalia"
+        },
+        {
+          "id": "link-071",
+          "type": "url",
+          "label": "Destination · HANOMALIA, accueil",
+          "group": "Pied de page",
+          "value": "index.html"
+        },
+        {
+          "id": "image-072",
+          "type": "image",
+          "label": "HANOMALIA",
+          "group": "Pied de page",
+          "value": "assets/logo-horizontal-blanc.png",
+          "alt": "HANOMALIA"
+        },
+        {
+          "id": "text-073",
+          "type": "text",
+          "label": "Texte · HANOMALIA",
+          "group": "Pied de page",
+          "value": "HANOMALIA"
+        },
+        {
+          "id": "text-074",
+          "type": "text",
+          "label": "Texte · Amiens, France · Heavy / Hardcore",
+          "group": "Pied de page",
+          "value": "Amiens, France · Heavy / Hardcore"
+        },
+        {
+          "id": "text-075",
+          "type": "text",
+          "label": "Lien · Retour en haut ↑",
+          "group": "Pied de page",
+          "value": "Retour en haut ↑"
+        },
+        {
+          "id": "theme-smoke",
+          "type": "image",
+          "label": "Fond fumée rouge",
+          "group": "Images du thème (tout le site)",
+          "value": "assets/fumee-rouge.jpg",
+          "alt": ""
+        },
+        {
+          "id": "theme-shadow",
+          "type": "image",
+          "label": "Logo en ombre à droite",
+          "group": "Images du thème (tout le site)",
+          "value": "assets/skull-original.png",
+          "alt": ""
+        }
+      ]
+    },
+    "groupe.html": {
+      "label": "Le groupe",
+      "fields": [
+        {
+          "id": "link-001",
+          "type": "url",
+          "label": "Destination · HANOMALIA, accueil",
+          "group": "Navigation",
+          "value": "index.html"
+        },
+        {
+          "id": "image-002",
+          "type": "image",
+          "label": "HANOMALIA",
+          "group": "Navigation",
+          "value": "assets/logo-horizontal-blanc.png",
+          "alt": "HANOMALIA"
+        },
+        {
+          "id": "text-003",
+          "type": "text",
+          "label": "Texte · Menu",
+          "group": "Navigation",
+          "value": "Menu"
+        },
+        {
+          "id": "text-004",
+          "type": "text",
+          "label": "Lien · Accueil",
+          "group": "Navigation",
+          "value": "Accueil"
+        },
+        {
+          "id": "link-005",
+          "type": "url",
+          "label": "Destination · Accueil",
+          "group": "Navigation",
+          "value": "index.html#musique"
+        },
+        {
+          "id": "text-006",
+          "type": "text",
+          "label": "Lien · Nos titres",
+          "group": "Navigation",
+          "value": "Nos titres"
+        },
+        {
+          "id": "link-007",
+          "type": "url",
+          "label": "Destination · Nos titres",
+          "group": "Navigation",
+          "value": "live.html"
+        },
+        {
+          "id": "text-008",
+          "type": "text",
+          "label": "Lien · Le groupe",
+          "group": "Navigation",
+          "value": "Le groupe"
+        },
+        {
+          "id": "link-009",
+          "type": "url",
+          "label": "Destination · Le groupe",
+          "group": "Navigation",
+          "value": "groupe.html"
+        },
+        {
+          "id": "text-010",
+          "type": "text",
+          "label": "Lien · Membres",
+          "group": "Navigation",
+          "value": "Membres"
+        },
+        {
+          "id": "link-011",
+          "type": "url",
+          "label": "Destination · Membres",
+          "group": "Navigation",
+          "value": "membres.html"
+        },
+        {
+          "id": "text-012",
+          "type": "text",
+          "label": "Lien · Galerie",
+          "group": "Navigation",
+          "value": "Galerie"
+        },
+        {
+          "id": "link-013",
+          "type": "url",
+          "label": "Destination · Galerie",
+          "group": "Navigation",
+          "value": "galerie.html"
+        },
+        {
+          "id": "text-014",
+          "type": "text",
+          "label": "Lien · Nous contacter",
+          "group": "Navigation",
+          "value": "Nous contacter"
+        },
+        {
+          "id": "link-015",
+          "type": "url",
+          "label": "Destination · Nous contacter ↗",
+          "group": "Navigation",
+          "value": "index.html#contact"
+        },
+        {
+          "id": "text-016",
+          "type": "text",
+          "label": "Texte · 03 / LE GROUPE",
+          "group": "Groupe",
+          "value": "03 / LE GROUPE"
+        },
+        {
+          "id": "text-017",
+          "type": "text",
+          "label": "Titre · Ça part d’Amiens",
+          "group": "Groupe",
+          "value": "Ça part d’Amiens"
+        },
+        {
+          "id": "text-018",
+          "type": "text",
+          "label": "Texte · HEAVY",
+          "group": "Groupe",
+          "value": "HEAVY"
+        },
+        {
+          "id": "text-019",
+          "type": "text",
+          "label": "Texte · HARDCORE",
+          "group": "Groupe",
+          "value": "HARDCORE"
+        },
+        {
+          "id": "text-020",
+          "type": "text",
+          "label": "Texte · DEPUIS 2023",
+          "group": "Groupe",
+          "value": "DEPUIS 2023"
+        },
+        {
+          "id": "text-021",
+          "type": "text",
+          "label": "Titre · Quatre visages.",
+          "group": "Groupe",
+          "value": "Quatre visages."
+        },
+        {
+          "id": "text-022",
+          "type": "text",
+          "label": "Titre · Une même énergie.",
+          "group": "Groupe",
+          "value": "Une même énergie."
+        },
+        {
+          "id": "text-023",
+          "type": "text",
+          "label": "Texte · Né à Amiens en 2023, HANOMALIA croise le heavy et le hardcore. En fran",
+          "group": "Groupe",
+          "value": "Né à Amiens en 2023, HANOMALIA croise le heavy et le hardcore. En français comme en anglais, une musique frontale, portée par la rage et l’envie de vous faire bouger."
+        },
+        {
+          "id": "text-024",
+          "type": "text",
+          "label": "Texte · Des riffs, du mouvement, du partage. Et la scène comme point de rencon",
+          "group": "Groupe",
+          "value": "Des riffs, du mouvement, du partage. Et la scène comme point de rencontre."
+        },
+        {
+          "id": "text-025",
+          "type": "text",
+          "label": "Texte · Billy",
+          "group": "Groupe",
+          "value": "Billy"
+        },
+        {
+          "id": "text-026",
+          "type": "text",
+          "label": "Texte · Guitare, chant",
+          "group": "Groupe",
+          "value": "Guitare, chant"
+        },
+        {
+          "id": "text-027",
+          "type": "text",
+          "label": "Texte · Alex",
+          "group": "Groupe",
+          "value": "Alex"
+        },
+        {
+          "id": "text-028",
+          "type": "text",
+          "label": "Texte · Chant",
+          "group": "Groupe",
+          "value": "Chant"
+        },
+        {
+          "id": "text-029",
+          "type": "text",
+          "label": "Texte · Bastien",
+          "group": "Groupe",
+          "value": "Bastien"
+        },
+        {
+          "id": "text-030",
+          "type": "text",
+          "label": "Texte · Guitare, chant",
+          "group": "Groupe",
+          "value": "Guitare, chant"
+        },
+        {
+          "id": "text-031",
+          "type": "text",
+          "label": "Texte · Max",
+          "group": "Groupe",
+          "value": "Max"
+        },
+        {
+          "id": "text-032",
+          "type": "text",
+          "label": "Texte · Basse, chant",
+          "group": "Groupe",
+          "value": "Basse, chant"
+        },
+        {
+          "id": "text-033",
+          "type": "text",
+          "label": "Lien · Découvrir les membres",
+          "group": "Groupe",
+          "value": "Découvrir les membres"
+        },
+        {
+          "id": "link-034",
+          "type": "url",
+          "label": "Destination · Découvrir les membres ↗",
+          "group": "Groupe",
+          "value": "membres.html"
+        },
+        {
+          "id": "image-035",
+          "type": "image",
+          "label": "Les quatre membres de HANOMALIA",
+          "group": "Groupe",
+          "value": "assets/groupe-hd.jpg",
+          "alt": "Les quatre membres de HANOMALIA"
+        },
+        {
+          "id": "text-036",
+          "type": "text",
+          "label": "Texte · HANOMALIA / AMIENS, FRANCE",
+          "group": "Groupe",
+          "value": "HANOMALIA / AMIENS, FRANCE"
+        },
+        {
+          "id": "text-037",
+          "type": "text",
+          "label": "Lien · ← Retour à l’accueil",
+          "group": "Présentation",
+          "value": "← Retour à l’accueil"
+        },
+        {
+          "id": "link-038",
+          "type": "url",
+          "label": "Destination · ← Retour à l’accueil",
+          "group": "Présentation",
+          "value": "index.html"
+        },
+        {
+          "id": "link-039",
+          "type": "url",
+          "label": "Destination · HANOMALIA, accueil",
+          "group": "Pied de page",
+          "value": "index.html"
+        },
+        {
+          "id": "image-040",
+          "type": "image",
+          "label": "HANOMALIA",
+          "group": "Pied de page",
+          "value": "assets/logo-horizontal-blanc.png",
+          "alt": "HANOMALIA"
+        },
+        {
+          "id": "text-041",
+          "type": "text",
+          "label": "Texte · HANOMALIA",
+          "group": "Pied de page",
+          "value": "HANOMALIA"
+        },
+        {
+          "id": "text-042",
+          "type": "text",
+          "label": "Texte · Amiens, France · Heavy / Hardcore",
+          "group": "Pied de page",
+          "value": "Amiens, France · Heavy / Hardcore"
+        },
+        {
+          "id": "text-043",
+          "type": "text",
+          "label": "Lien · Retour en haut ↑",
+          "group": "Pied de page",
+          "value": "Retour en haut ↑"
+        }
+      ]
+    },
+    "membres.html": {
+      "label": "Membres",
+      "fields": [
+        {
+          "id": "link-001",
+          "type": "url",
+          "label": "Destination · HANOMALIA, accueil",
+          "group": "Navigation",
+          "value": "index.html"
+        },
+        {
+          "id": "image-002",
+          "type": "image",
+          "label": "HANOMALIA",
+          "group": "Navigation",
+          "value": "assets/logo-horizontal-blanc.png",
+          "alt": "HANOMALIA"
+        },
+        {
+          "id": "text-003",
+          "type": "text",
+          "label": "Texte · Menu",
+          "group": "Navigation",
+          "value": "Menu"
+        },
+        {
+          "id": "text-004",
+          "type": "text",
+          "label": "Lien · Accueil",
+          "group": "Navigation",
+          "value": "Accueil"
+        },
+        {
+          "id": "link-005",
+          "type": "url",
+          "label": "Destination · Accueil",
+          "group": "Navigation",
+          "value": "index.html#musique"
+        },
+        {
+          "id": "text-006",
+          "type": "text",
+          "label": "Lien · Nos titres",
+          "group": "Navigation",
+          "value": "Nos titres"
+        },
+        {
+          "id": "link-007",
+          "type": "url",
+          "label": "Destination · Nos titres",
+          "group": "Navigation",
+          "value": "live.html"
+        },
+        {
+          "id": "text-008",
+          "type": "text",
+          "label": "Lien · Le groupe",
+          "group": "Navigation",
+          "value": "Le groupe"
+        },
+        {
+          "id": "link-009",
+          "type": "url",
+          "label": "Destination · Le groupe",
+          "group": "Navigation",
+          "value": "groupe.html"
+        },
+        {
+          "id": "text-010",
+          "type": "text",
+          "label": "Lien · Membres",
+          "group": "Navigation",
+          "value": "Membres"
+        },
+        {
+          "id": "link-011",
+          "type": "url",
+          "label": "Destination · Membres",
+          "group": "Navigation",
+          "value": "membres.html"
+        },
+        {
+          "id": "text-012",
+          "type": "text",
+          "label": "Lien · Galerie",
+          "group": "Navigation",
+          "value": "Galerie"
+        },
+        {
+          "id": "link-013",
+          "type": "url",
+          "label": "Destination · Galerie",
+          "group": "Navigation",
+          "value": "galerie.html"
+        },
+        {
+          "id": "text-014",
+          "type": "text",
+          "label": "Lien · Nous contacter",
+          "group": "Navigation",
+          "value": "Nous contacter"
+        },
+        {
+          "id": "link-015",
+          "type": "url",
+          "label": "Destination · Nous contacter ↗",
+          "group": "Navigation",
+          "value": "index.html#contact"
+        },
+        {
+          "id": "text-016",
+          "type": "text",
+          "label": "Texte · LE COLLECTIF / HANOMALIA",
+          "group": "Présentation",
+          "value": "LE COLLECTIF / HANOMALIA"
+        },
+        {
+          "id": "text-017",
+          "type": "text",
+          "label": "Titre · Quatre visages.",
+          "group": "Présentation",
+          "value": "Quatre visages."
+        },
+        {
+          "id": "text-018",
+          "type": "text",
+          "label": "Titre · Une même énergie",
+          "group": "Présentation",
+          "value": "Une même énergie"
+        },
+        {
+          "id": "text-019",
+          "type": "text",
+          "label": "Texte · Heavy. Hardcore. Amiens.",
+          "group": "Présentation",
+          "value": "Heavy. Hardcore. Amiens."
+        },
+        {
+          "id": "text-020",
+          "type": "text",
+          "label": "Texte · Le groupe prend vie sur scène.",
+          "group": "Présentation",
+          "value": "Le groupe prend vie sur scène."
+        },
+        {
+          "id": "image-021",
+          "type": "image",
+          "label": "Billy sur scène avec HANOMALIA",
+          "group": "Billy",
+          "value": "assets/Billy.webp",
+          "alt": "Billy sur scène avec HANOMALIA"
+        },
+        {
+          "id": "text-022",
+          "type": "text",
+          "label": "Titre · Billy",
+          "group": "Billy",
+          "value": "Billy"
+        },
+        {
+          "id": "text-023",
+          "type": "text",
+          "label": "Texte · Guitare, chant",
+          "group": "Billy",
+          "value": "Guitare, chant"
+        },
+        {
+          "id": "image-024",
+          "type": "image",
+          "label": "Alex sur scène avec HANOMALIA",
+          "group": "Alex",
+          "value": "assets/Alex.webp",
+          "alt": "Alex sur scène avec HANOMALIA"
+        },
+        {
+          "id": "text-025",
+          "type": "text",
+          "label": "Titre · Alex",
+          "group": "Alex",
+          "value": "Alex"
+        },
+        {
+          "id": "text-026",
+          "type": "text",
+          "label": "Texte · Chant",
+          "group": "Alex",
+          "value": "Chant"
+        },
+        {
+          "id": "image-027",
+          "type": "image",
+          "label": "Bastien sur scène avec HANOMALIA",
+          "group": "Bastien",
+          "value": "assets/bastien-20261030.jpg",
+          "alt": "Bastien sur scène avec HANOMALIA"
+        },
+        {
+          "id": "text-028",
+          "type": "text",
+          "label": "Titre · Bastien",
+          "group": "Bastien",
+          "value": "Bastien"
+        },
+        {
+          "id": "text-029",
+          "type": "text",
+          "label": "Texte · Guitare, chant",
+          "group": "Bastien",
+          "value": "Guitare, chant"
+        },
+        {
+          "id": "image-030",
+          "type": "image",
+          "label": "Max sur scène avec HANOMALIA",
+          "group": "Max",
+          "value": "assets/Max.webp",
+          "alt": "Max sur scène avec HANOMALIA"
+        },
+        {
+          "id": "text-031",
+          "type": "text",
+          "label": "Titre · Max",
+          "group": "Max",
+          "value": "Max"
+        },
+        {
+          "id": "text-032",
+          "type": "text",
+          "label": "Texte · Basse, chant",
+          "group": "Max",
+          "value": "Basse, chant"
+        },
+        {
+          "id": "text-033",
+          "type": "text",
+          "label": "Lien · ← Retour au groupe",
+          "group": "Présentation",
+          "value": "← Retour au groupe"
+        },
+        {
+          "id": "link-034",
+          "type": "url",
+          "label": "Destination · ← Retour au groupe",
+          "group": "Présentation",
+          "value": "groupe.html"
+        },
+        {
+          "id": "link-035",
+          "type": "url",
+          "label": "Destination · HANOMALIA, accueil",
+          "group": "Pied de page",
+          "value": "index.html"
+        },
+        {
+          "id": "image-036",
+          "type": "image",
+          "label": "HANOMALIA",
+          "group": "Pied de page",
+          "value": "assets/logo-horizontal-blanc.png",
+          "alt": "HANOMALIA"
+        },
+        {
+          "id": "text-037",
+          "type": "text",
+          "label": "Texte · HANOMALIA",
+          "group": "Pied de page",
+          "value": "HANOMALIA"
+        },
+        {
+          "id": "text-038",
+          "type": "text",
+          "label": "Texte · Amiens, France · Heavy / Hardcore",
+          "group": "Pied de page",
+          "value": "Amiens, France · Heavy / Hardcore"
+        },
+        {
+          "id": "text-039",
+          "type": "text",
+          "label": "Lien · Retour en haut ↑",
+          "group": "Pied de page",
+          "value": "Retour en haut ↑"
+        }
+      ]
+    },
+    "live.html": {
+      "label": "Nos titres",
+      "fields": [
+        {
+          "id": "link-001",
+          "type": "url",
+          "label": "Destination · HANOMALIA, accueil",
+          "group": "Navigation",
+          "value": "index.html"
+        },
+        {
+          "id": "image-002",
+          "type": "image",
+          "label": "HANOMALIA",
+          "group": "Navigation",
+          "value": "assets/logo-horizontal-blanc.png",
+          "alt": "HANOMALIA"
+        },
+        {
+          "id": "text-003",
+          "type": "text",
+          "label": "Texte · Menu",
+          "group": "Navigation",
+          "value": "Menu"
+        },
+        {
+          "id": "text-004",
+          "type": "text",
+          "label": "Lien · Accueil",
+          "group": "Navigation",
+          "value": "Accueil"
+        },
+        {
+          "id": "link-005",
+          "type": "url",
+          "label": "Destination · Accueil",
+          "group": "Navigation",
+          "value": "index.html#musique"
+        },
+        {
+          "id": "text-006",
+          "type": "text",
+          "label": "Lien · Nos titres",
+          "group": "Navigation",
+          "value": "Nos titres"
+        },
+        {
+          "id": "link-007",
+          "type": "url",
+          "label": "Destination · Nos titres",
+          "group": "Navigation",
+          "value": "live.html"
+        },
+        {
+          "id": "text-008",
+          "type": "text",
+          "label": "Lien · Le groupe",
+          "group": "Navigation",
+          "value": "Le groupe"
+        },
+        {
+          "id": "link-009",
+          "type": "url",
+          "label": "Destination · Le groupe",
+          "group": "Navigation",
+          "value": "groupe.html"
+        },
+        {
+          "id": "text-010",
+          "type": "text",
+          "label": "Lien · Membres",
+          "group": "Navigation",
+          "value": "Membres"
+        },
+        {
+          "id": "link-011",
+          "type": "url",
+          "label": "Destination · Membres",
+          "group": "Navigation",
+          "value": "membres.html"
+        },
+        {
+          "id": "text-012",
+          "type": "text",
+          "label": "Lien · Galerie",
+          "group": "Navigation",
+          "value": "Galerie"
+        },
+        {
+          "id": "link-013",
+          "type": "url",
+          "label": "Destination · Galerie",
+          "group": "Navigation",
+          "value": "galerie.html"
+        },
+        {
+          "id": "text-014",
+          "type": "text",
+          "label": "Lien · Nous contacter",
+          "group": "Navigation",
+          "value": "Nous contacter"
+        },
+        {
+          "id": "link-015",
+          "type": "url",
+          "label": "Destination · Nous contacter ↗",
+          "group": "Navigation",
+          "value": "index.html#contact"
+        },
+        {
+          "id": "text-016",
+          "type": "text",
+          "label": "Texte · 02 / LIVE",
+          "group": "Présentation",
+          "value": "02 / LIVE"
+        },
+        {
+          "id": "text-017",
+          "type": "text",
+          "label": "Titre · Nos titres",
+          "group": "Présentation",
+          "value": "Nos titres"
+        },
+        {
+          "id": "text-018",
+          "type": "text",
+          "label": "Titre · Hanomalie",
+          "group": "Présentation",
+          "value": "Hanomalie"
+        },
+        {
+          "id": "text-019",
+          "type": "text",
+          "label": "Texte · Durée :",
+          "group": "Présentation",
+          "value": "Durée :"
+        },
+        {
+          "id": "text-020",
+          "type": "text",
+          "label": "Lien · Écouter",
+          "group": "Présentation",
+          "value": "Écouter"
+        },
+        {
+          "id": "link-021",
+          "type": "url",
+          "label": "Destination · Écouter ↗",
+          "group": "Présentation",
+          "value": "https://linktr.ee/hanomalia"
+        },
+        {
+          "id": "text-022",
+          "type": "text",
+          "label": "Titre · The Burdened Cure",
+          "group": "Présentation",
+          "value": "The Burdened Cure"
+        },
+        {
+          "id": "text-023",
+          "type": "text",
+          "label": "Texte · Durée :",
+          "group": "Présentation",
+          "value": "Durée :"
+        },
+        {
+          "id": "text-024",
+          "type": "text",
+          "label": "Titre · Songes",
+          "group": "Présentation",
+          "value": "Songes"
+        },
+        {
+          "id": "text-025",
+          "type": "text",
+          "label": "Texte · Durée :",
+          "group": "Présentation",
+          "value": "Durée :"
+        },
+        {
+          "id": "text-026",
+          "type": "text",
+          "label": "Titre · Dernier Sommeil",
+          "group": "Présentation",
+          "value": "Dernier Sommeil"
+        },
+        {
+          "id": "text-027",
+          "type": "text",
+          "label": "Texte · Durée :",
+          "group": "Présentation",
+          "value": "Durée :"
+        },
+        {
+          "id": "text-028",
+          "type": "text",
+          "label": "Titre · Freaking Head",
+          "group": "Présentation",
+          "value": "Freaking Head"
+        },
+        {
+          "id": "text-029",
+          "type": "text",
+          "label": "Texte · Durée :",
+          "group": "Présentation",
+          "value": "Durée :"
+        },
+        {
+          "id": "text-030",
+          "type": "text",
+          "label": "Titre · Molotov Fiesta",
+          "group": "Présentation",
+          "value": "Molotov Fiesta"
+        },
+        {
+          "id": "text-031",
+          "type": "text",
+          "label": "Texte · Durée :",
+          "group": "Présentation",
+          "value": "Durée :"
+        },
+        {
+          "id": "text-032",
+          "type": "text",
+          "label": "Titre · Le tatouage des pirates",
+          "group": "Présentation",
+          "value": "Le tatouage des pirates"
+        },
+        {
+          "id": "text-033",
+          "type": "text",
+          "label": "Texte · Durée :",
+          "group": "Présentation",
+          "value": "Durée :"
+        },
+        {
+          "id": "text-034",
+          "type": "text",
+          "label": "Titre · Clean & Honest",
+          "group": "Présentation",
+          "value": "Clean & Honest"
+        },
+        {
+          "id": "text-035",
+          "type": "text",
+          "label": "Texte · Durée :",
+          "group": "Présentation",
+          "value": "Durée :"
+        },
+        {
+          "id": "text-036",
+          "type": "text",
+          "label": "Lien · ← Retour à l’accueil",
+          "group": "Présentation",
+          "value": "← Retour à l’accueil"
+        },
+        {
+          "id": "link-037",
+          "type": "url",
+          "label": "Destination · ← Retour à l’accueil",
+          "group": "Présentation",
+          "value": "index.html"
+        },
+        {
+          "id": "link-038",
+          "type": "url",
+          "label": "Destination · HANOMALIA, accueil",
+          "group": "Pied de page",
+          "value": "index.html"
+        },
+        {
+          "id": "image-039",
+          "type": "image",
+          "label": "HANOMALIA",
+          "group": "Pied de page",
+          "value": "assets/logo-horizontal-blanc.png",
+          "alt": "HANOMALIA"
+        },
+        {
+          "id": "text-040",
+          "type": "text",
+          "label": "Texte · HANOMALIA",
+          "group": "Pied de page",
+          "value": "HANOMALIA"
+        },
+        {
+          "id": "text-041",
+          "type": "text",
+          "label": "Texte · Amiens, France · Heavy / Hardcore",
+          "group": "Pied de page",
+          "value": "Amiens, France · Heavy / Hardcore"
+        },
+        {
+          "id": "text-042",
+          "type": "text",
+          "label": "Lien · Retour en haut ↑",
+          "group": "Pied de page",
+          "value": "Retour en haut ↑"
+        }
+      ]
+    },
+    "merch.html": {
+      "label": "Merch",
+      "fields": [
+        {
+          "id": "link-001",
+          "type": "url",
+          "label": "Destination · HANOMALIA, accueil",
+          "group": "Navigation",
+          "value": "index.html"
+        },
+        {
+          "id": "image-002",
+          "type": "image",
+          "label": "HANOMALIA",
+          "group": "Navigation",
+          "value": "assets/logo-horizontal-blanc.png",
+          "alt": "HANOMALIA"
+        },
+        {
+          "id": "text-003",
+          "type": "text",
+          "label": "Texte · Menu",
+          "group": "Navigation",
+          "value": "Menu"
+        },
+        {
+          "id": "text-004",
+          "type": "text",
+          "label": "Lien · Accueil",
+          "group": "Navigation",
+          "value": "Accueil"
+        },
+        {
+          "id": "link-005",
+          "type": "url",
+          "label": "Destination · Accueil",
+          "group": "Navigation",
+          "value": "index.html#musique"
+        },
+        {
+          "id": "text-006",
+          "type": "text",
+          "label": "Lien · Nos titres",
+          "group": "Navigation",
+          "value": "Nos titres"
+        },
+        {
+          "id": "link-007",
+          "type": "url",
+          "label": "Destination · Nos titres",
+          "group": "Navigation",
+          "value": "live.html"
+        },
+        {
+          "id": "text-008",
+          "type": "text",
+          "label": "Lien · Le groupe",
+          "group": "Navigation",
+          "value": "Le groupe"
+        },
+        {
+          "id": "link-009",
+          "type": "url",
+          "label": "Destination · Le groupe",
+          "group": "Navigation",
+          "value": "groupe.html"
+        },
+        {
+          "id": "text-010",
+          "type": "text",
+          "label": "Lien · Membres",
+          "group": "Navigation",
+          "value": "Membres"
+        },
+        {
+          "id": "link-011",
+          "type": "url",
+          "label": "Destination · Membres",
+          "group": "Navigation",
+          "value": "membres.html"
+        },
+        {
+          "id": "text-012",
+          "type": "text",
+          "label": "Lien · Galerie",
+          "group": "Navigation",
+          "value": "Galerie"
+        },
+        {
+          "id": "link-013",
+          "type": "url",
+          "label": "Destination · Galerie",
+          "group": "Navigation",
+          "value": "galerie.html"
+        },
+        {
+          "id": "text-014",
+          "type": "text",
+          "label": "Lien · Nous contacter",
+          "group": "Navigation",
+          "value": "Nous contacter"
+        },
+        {
+          "id": "link-015",
+          "type": "url",
+          "label": "Destination · Nous contacter ↗",
+          "group": "Navigation",
+          "value": "index.html#contact"
+        },
+        {
+          "id": "text-016",
+          "type": "text",
+          "label": "Texte · HANOMALIA / COLLECTION",
+          "group": "Présentation",
+          "value": "HANOMALIA / COLLECTION"
+        },
+        {
+          "id": "text-017",
+          "type": "text",
+          "label": "Titre · Merch",
+          "group": "Présentation",
+          "value": "Merch"
+        },
+        {
+          "id": "text-018",
+          "type": "text",
+          "label": "Texte · Notre style, notre merch.",
+          "group": "Présentation",
+          "value": "Notre style, notre merch."
+        },
+        {
+          "id": "text-019",
+          "type": "text",
+          "label": "Texte · Les photos des articles arrivent bientôt.",
+          "group": "Merch note",
+          "value": "Les photos des articles arrivent bientôt."
+        },
+        {
+          "id": "text-020",
+          "type": "text",
+          "label": "Lien · ← Retour à l’accueil",
+          "group": "Présentation",
+          "value": "← Retour à l’accueil"
+        },
+        {
+          "id": "link-021",
+          "type": "url",
+          "label": "Destination · ← Retour à l’accueil",
+          "group": "Présentation",
+          "value": "index.html"
+        },
+        {
+          "id": "link-022",
+          "type": "url",
+          "label": "Destination · HANOMALIA, accueil",
+          "group": "Pied de page",
+          "value": "index.html"
+        },
+        {
+          "id": "image-023",
+          "type": "image",
+          "label": "HANOMALIA",
+          "group": "Pied de page",
+          "value": "assets/logo-horizontal-blanc.png",
+          "alt": "HANOMALIA"
+        },
+        {
+          "id": "text-024",
+          "type": "text",
+          "label": "Texte · HANOMALIA",
+          "group": "Pied de page",
+          "value": "HANOMALIA"
+        },
+        {
+          "id": "text-025",
+          "type": "text",
+          "label": "Texte · Amiens, France · Heavy / Hardcore",
+          "group": "Pied de page",
+          "value": "Amiens, France · Heavy / Hardcore"
+        },
+        {
+          "id": "text-026",
+          "type": "text",
+          "label": "Lien · Retour en haut ↑",
+          "group": "Pied de page",
+          "value": "Retour en haut ↑"
+        }
+      ]
+    },
+    "galerie.html": {
+      "label": "Galerie",
+      "fields": [
+        {
+          "id": "link-001",
+          "type": "url",
+          "label": "Destination · HANOMALIA, accueil",
+          "group": "Navigation",
+          "value": "index.html"
+        },
+        {
+          "id": "image-002",
+          "type": "image",
+          "label": "HANOMALIA",
+          "group": "Navigation",
+          "value": "assets/logo-horizontal-blanc.png",
+          "alt": "HANOMALIA"
+        },
+        {
+          "id": "text-003",
+          "type": "text",
+          "label": "Texte · Menu",
+          "group": "Navigation",
+          "value": "Menu"
+        },
+        {
+          "id": "text-004",
+          "type": "text",
+          "label": "Lien · Accueil",
+          "group": "Navigation",
+          "value": "Accueil"
+        },
+        {
+          "id": "link-005",
+          "type": "url",
+          "label": "Destination · Accueil",
+          "group": "Navigation",
+          "value": "index.html#musique"
+        },
+        {
+          "id": "text-006",
+          "type": "text",
+          "label": "Lien · Nos titres",
+          "group": "Navigation",
+          "value": "Nos titres"
+        },
+        {
+          "id": "link-007",
+          "type": "url",
+          "label": "Destination · Nos titres",
+          "group": "Navigation",
+          "value": "live.html"
+        },
+        {
+          "id": "text-008",
+          "type": "text",
+          "label": "Lien · Le groupe",
+          "group": "Navigation",
+          "value": "Le groupe"
+        },
+        {
+          "id": "link-009",
+          "type": "url",
+          "label": "Destination · Le groupe",
+          "group": "Navigation",
+          "value": "groupe.html"
+        },
+        {
+          "id": "text-010",
+          "type": "text",
+          "label": "Lien · Membres",
+          "group": "Navigation",
+          "value": "Membres"
+        },
+        {
+          "id": "link-011",
+          "type": "url",
+          "label": "Destination · Membres",
+          "group": "Navigation",
+          "value": "membres.html"
+        },
+        {
+          "id": "text-012",
+          "type": "text",
+          "label": "Lien · Galerie",
+          "group": "Navigation",
+          "value": "Galerie"
+        },
+        {
+          "id": "link-013",
+          "type": "url",
+          "label": "Destination · Galerie",
+          "group": "Navigation",
+          "value": "galerie.html"
+        },
+        {
+          "id": "text-014",
+          "type": "text",
+          "label": "Lien · Nous contacter",
+          "group": "Navigation",
+          "value": "Nous contacter"
+        },
+        {
+          "id": "link-015",
+          "type": "url",
+          "label": "Destination · Nous contacter ↗",
+          "group": "Navigation",
+          "value": "index.html#contact"
+        },
+        {
+          "id": "text-016",
+          "type": "text",
+          "label": "Texte · HANOMALIA / EN IMAGES",
+          "group": "Présentation",
+          "value": "HANOMALIA / EN IMAGES"
+        },
+        {
+          "id": "text-017",
+          "type": "text",
+          "label": "Titre · Galerie",
+          "group": "Présentation",
+          "value": "Galerie"
+        },
+        {
+          "id": "text-018",
+          "type": "text",
+          "label": "Texte · La scène. Les visages. L’énergie.",
+          "group": "Présentation",
+          "value": "La scène. Les visages. L’énergie."
+        },
+        {
+          "id": "text-019",
+          "type": "text",
+          "label": "Texte · Événement",
+          "group": "Album tools",
+          "value": "Événement"
+        },
+        {
+          "id": "text-020",
+          "type": "text",
+          "label": "Texte · Tous les événements",
+          "group": "Album filter",
+          "value": "Tous les événements"
+        },
+        {
+          "id": "text-021",
+          "type": "text",
+          "label": "Lien · ← Retour à l’accueil",
+          "group": "Présentation",
+          "value": "← Retour à l’accueil"
+        },
+        {
+          "id": "link-022",
+          "type": "url",
+          "label": "Destination · ← Retour à l’accueil",
+          "group": "Présentation",
+          "value": "index.html"
+        },
+        {
+          "id": "link-023",
+          "type": "url",
+          "label": "Destination · HANOMALIA, accueil",
+          "group": "Pied de page",
+          "value": "index.html"
+        },
+        {
+          "id": "image-024",
+          "type": "image",
+          "label": "HANOMALIA",
+          "group": "Pied de page",
+          "value": "assets/logo-horizontal-blanc.png",
+          "alt": "HANOMALIA"
+        },
+        {
+          "id": "text-025",
+          "type": "text",
+          "label": "Texte · HANOMALIA",
+          "group": "Pied de page",
+          "value": "HANOMALIA"
+        },
+        {
+          "id": "text-026",
+          "type": "text",
+          "label": "Texte · Amiens, France · Heavy / Hardcore",
+          "group": "Pied de page",
+          "value": "Amiens, France · Heavy / Hardcore"
+        },
+        {
+          "id": "text-027",
+          "type": "text",
+          "label": "Lien · Retour en haut ↑",
+          "group": "Pied de page",
+          "value": "Retour en haut ↑"
+        }
+      ]
+    }
+  },
+  "collections": {
+    "merch": [
+      {
+        "name": "Casquette",
+        "category": "Accessoire",
+        "price": "20 €",
+        "image": null,
+        "description": "",
+        "sizes": [],
+        "orderUrl": null
+      },
+      {
+        "name": "T-shirt",
+        "category": "Vêtement",
+        "price": "20 €",
+        "image": null,
+        "description": "",
+        "sizes": [],
+        "orderUrl": null
+      }
+    ],
+    "albums": [
+      {
+        "title": "WARPZONE",
+        "date": "2025-06-27",
+        "location": "",
+        "photos": [
+          {
+            "src": "assets/warpzone-11.webp",
+            "alt": "Le groupe et le public réunis — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-01.webp",
+            "alt": "Le chant face au public — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-02.webp",
+            "alt": "Guitare et chant sur scène — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-04.webp",
+            "alt": "La basse sur scène — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-03.webp",
+            "alt": "Les guitares de HANOMALIA — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-05.webp",
+            "alt": "Le chant au WARPZONE — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-07.webp",
+            "alt": "Le public au contact du groupe — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-08.webp",
+            "alt": "Guitare sous les lumières du concert — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-09.webp",
+            "alt": "Guitare et chant au WARPZONE — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-10.webp",
+            "alt": "HANOMALIA sur scène — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-12.webp",
+            "alt": "Guitariste au WARPZONE — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-13.webp",
+            "alt": "Le chanteur au microphone — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-14.webp",
+            "alt": "Bassiste au WARPZONE — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-15.webp",
+            "alt": "Chant et guitare — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-16.webp",
+            "alt": "Détail de la guitare — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-17.webp",
+            "alt": "Chant au premier plan — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-18.webp",
+            "alt": "Guitare en concert — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          },
+          {
+            "src": "assets/warpzone-19.webp",
+            "alt": "Basse au premier plan — concert WARPZONE du 27 juin 2025",
+            "caption": "HANOMALIA · WARPZONE · 27 juin 2025"
+          }
+        ]
+      },
+      {
+        "title": "Taverne Electrik",
+        "date": "2026-09-12",
+        "location": "",
+        "photos": [
+          {
+            "src": "assets/taverne-01.webp",
+            "alt": "HANOMALIA à la Taverne Electrik — photo 1",
+            "caption": "HANOMALIA · Taverne Electrik · 12 septembre 2026"
+          },
+          {
+            "src": "assets/taverne-02.webp",
+            "alt": "HANOMALIA à la Taverne Electrik — photo 2",
+            "caption": "HANOMALIA · Taverne Electrik · 12 septembre 2026"
+          },
+          {
+            "src": "assets/taverne-03.webp",
+            "alt": "HANOMALIA à la Taverne Electrik — photo 3",
+            "caption": "HANOMALIA · Taverne Electrik · 12 septembre 2026"
+          },
+          {
+            "src": "assets/taverne-04.webp",
+            "alt": "HANOMALIA à la Taverne Electrik — photo 4",
+            "caption": "HANOMALIA · Taverne Electrik · 12 septembre 2026"
+          },
+          {
+            "src": "assets/taverne-05.webp",
+            "alt": "HANOMALIA à la Taverne Electrik — photo 5",
+            "caption": "HANOMALIA · Taverne Electrik · 12 septembre 2026"
+          },
+          {
+            "src": "assets/taverne-06.webp",
+            "alt": "HANOMALIA à la Taverne Electrik — photo 6",
+            "caption": "HANOMALIA · Taverne Electrik · 12 septembre 2026"
+          },
+          {
+            "src": "assets/taverne-07.webp",
+            "alt": "HANOMALIA à la Taverne Electrik — photo 7",
+            "caption": "HANOMALIA · Taverne Electrik · 12 septembre 2026"
+          },
+          {
+            "src": "assets/taverne-08.webp",
+            "alt": "HANOMALIA à la Taverne Electrik — photo 8",
+            "caption": "HANOMALIA · Taverne Electrik · 12 septembre 2026"
+          },
+          {
+            "src": "assets/taverne-09.webp",
+            "alt": "HANOMALIA à la Taverne Electrik — photo 9",
+            "caption": "HANOMALIA · Taverne Electrik · 12 septembre 2026"
+          },
+          {
+            "src": "assets/taverne-10.webp",
+            "alt": "HANOMALIA à la Taverne Electrik — photo 10",
+            "caption": "HANOMALIA · Taverne Electrik · 12 septembre 2026"
+          },
+          {
+            "src": "assets/taverne-11.webp",
+            "alt": "HANOMALIA à la Taverne Electrik — photo 11",
+            "caption": "HANOMALIA · Taverne Electrik · 12 septembre 2026"
+          },
+          {
+            "src": "assets/taverne-12.webp",
+            "alt": "HANOMALIA à la Taverne Electrik — photo 12",
+            "caption": "HANOMALIA · Taverne Electrik · 12 septembre 2026"
+          }
+        ]
+      },
+      {
+        "title": "Fête de la musique 2026",
+        "date": "2026-06-21",
+        "location": "",
+        "photos": [
+          {
+            "src": "assets/fdlm26-01.webp",
+            "alt": "HANOMALIA à la Fête de la musique 2026 — photo 1",
+            "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
+          },
+          {
+            "src": "assets/fdlm26-02.webp",
+            "alt": "HANOMALIA à la Fête de la musique 2026 — photo 2",
+            "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
+          },
+          {
+            "src": "assets/fdlm26-03.webp",
+            "alt": "HANOMALIA à la Fête de la musique 2026 — photo 3",
+            "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
+          },
+          {
+            "src": "assets/fdlm26-04.webp",
+            "alt": "HANOMALIA à la Fête de la musique 2026 — photo 4",
+            "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
+          },
+          {
+            "src": "assets/fdlm26-05.webp",
+            "alt": "HANOMALIA à la Fête de la musique 2026 — photo 5",
+            "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
+          },
+          {
+            "src": "assets/fdlm26-06.webp",
+            "alt": "HANOMALIA à la Fête de la musique 2026 — photo 6",
+            "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
+          },
+          {
+            "src": "assets/fdlm26-07.webp",
+            "alt": "HANOMALIA à la Fête de la musique 2026 — photo 7",
+            "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
+          },
+          {
+            "src": "assets/fdlm26-08.webp",
+            "alt": "HANOMALIA à la Fête de la musique 2026 — photo 8",
+            "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
+          },
+          {
+            "src": "assets/fdlm26-09.webp",
+            "alt": "HANOMALIA à la Fête de la musique 2026 — photo 9",
+            "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
+          },
+          {
+            "src": "assets/fdlm26-10.webp",
+            "alt": "HANOMALIA à la Fête de la musique 2026 — photo 10",
+            "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
+          },
+          {
+            "src": "assets/fdlm26-11.webp",
+            "alt": "HANOMALIA à la Fête de la musique 2026 — photo 11",
+            "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
+          },
+          {
+            "src": "assets/fdlm26-12.webp",
+            "alt": "HANOMALIA à la Fête de la musique 2026 — photo 12",
+            "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
+          },
+          {
+            "src": "assets/fdlm26-13.webp",
+            "alt": "HANOMALIA à la Fête de la musique 2026 — photo 13",
+            "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
+          },
+          {
+            "src": "assets/fdlm26-14.webp",
+            "alt": "HANOMALIA à la Fête de la musique 2026 — photo 14",
+            "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
+          },
+          {
+            "src": "assets/fdlm26-15.webp",
+            "alt": "HANOMALIA à la Fête de la musique 2026 — photo 15",
+            "caption": "HANOMALIA · Fête de la musique · 21 juin 2026"
+          }
+        ]
+      }
+    ]
+  }
+}

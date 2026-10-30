@@ -31,3 +31,7 @@ Le workflow Pages compile la source de vérité et déploie la V2. Le dépôt of
 ## Vérifications
 
 `node --test tests/admin.test.mjs` vérifie les validations, l’encodage Unicode, les références média, le refus des conflits et les écritures Git atomiques avec un serveur simulé.
+
+## Gestion des versions
+
+Chaque commit de la branche main est une version des fichiers publics. Le déploiement génère versions.json à partir de tout l’historique Git (checkout fetch-depth: 0), accessible sans connexion. Le bouton Actualiser utilise l’API GitHub avec pagination complète. Une restauration charge un commit dans le brouillon, puis publie un nouveau commit dont le parent est la tête actuelle, sans force. Les arbres admin/, scripts/, tests/, .github/, .gitignore et cette documentation restent ceux de la tête actuelle pour conserver l’administration. Les autres fichiers publics viennent du commit sélectionné, avec le contenu JSON du brouillon. Un changement de tête depuis la sélection bloque la restauration. Les versions avant le CMS peuvent être restaurées telles quelles, sans édition par formulaires ni aperçu interactif. Les versions historiques restent dans Git ; aucune copie des images n’est créée pour chaque version. Les dates et auteurs proviennent des commits ; l’historique peut aussi inclure un commit dont le déploiement a échoué.

@@ -43,13 +43,19 @@ export function referencedUploads(doc){
 }
 export function encodeText(text){let binary='';for(const byte of new TextEncoder().encode(text))binary+=String.fromCharCode(byte);return btoa(binary);}
 export function decodeText(content){return new TextDecoder().decode(Uint8Array.from(atob(content.replace(/\s/g,'')),c=>c.charCodeAt(0)));}
-export async function publishDocument({api,document,uploads,baselineSha,onProgress=()=>{}}){
+export async function publishDocument({api,document,uploads,baselineSha,restoreCommit=null,expectedHead=null,onProgress=()=>{}}){
   validateDocument(document);
   if(!baselineSha)throw Error('Reconnecte-toi à GitHub pour vérifier la version avant de publier.');
   const ref=await api('/git/ref/heads/main');const head=ref.object.sha;
+  if(restoreCommit&&(!/^[a-f0-9]{40}$/.test(restoreCommit)||head!==expectedHead))throw Error('La version GitHub a changé. Recharge l’historique puis sélectionne à nouveau la version à restaurer.');
   const current=await api('/contents/'+CONTENT_PATH+'?ref='+head);
   if(current.sha!==baselineSha){const error=Error('Le contenu a changé sur GitHub depuis ton ouverture. Exporte ton brouillon, puis recharge la version publiée avant de continuer.');error.code='CONFLICT';throw error;}
   const commit=await api('/git/commits/'+head);
+  let baseTree=commit.tree.sha;
+  if(restoreCommit){
+    const historical=await api('/git/commits/'+restoreCommit);
+    baseTree=historical.tree.sha;
+  }
   const needed=referencedUploads(document);const entries=[];
   const selected=uploads.filter(u=>needed.has(u.path));
   for(let i=0;i<selected.length;i++){
@@ -63,8 +69,25 @@ export async function publishDocument({api,document,uploads,baselineSha,onProgre
   const content=JSON.stringify(document,null,2)+'\n';
   const blob=await api('/git/blobs',{method:'POST',body:{content,encoding:'utf-8'}});
   entries.push({path:CONTENT_PATH,mode:'100644',type:'blob',sha:blob.sha});
-  const tree=await api('/git/trees',{method:'POST',body:{base_tree:commit.tree.sha,tree:entries}});
-  const saved=await api('/git/commits',{method:'POST',body:{message:'Mettre à jour les contenus depuis l’administration',tree:tree.sha,parents:[head]}});
+  if(restoreCommit){
+    // Keep the current administration/build machinery while restoring the public site.
+    const currentTree=await api('/git/trees/'+commit.tree.sha);
+    for(const entry of currentTree.tree){
+      if(['admin','scripts','tests','.github','.gitignore','ADMINISTRATION.md'].includes(entry.path))entries.push({path:entry.path,mode:entry.mode,type:entry.type,sha:entry.sha});
+    }
+  }
+  const tree=await api('/git/trees',{method:'POST',body:{base_tree:baseTree,tree:entries}});
+  const saved=await api('/git/commits',{method:'POST',body:{message:restoreCommit?'Restaurer la version '+restoreCommit.slice(0,7)+' depuis l’administration':'Mettre à jour les contenus depuis l’administration',tree:tree.sha,parents:[head]}});
   await api('/git/refs/heads/main',{method:'PATCH',body:{sha:saved.sha,force:false}});
   return {commit:saved.sha,contentSha:blob.sha};
+}
+
+export async function listVersions(api){
+  const commits=[];let page=1;
+  for(;;page++){
+    const batch=await api('/commits?sha=main&per_page=100&page='+page);
+    if(!Array.isArray(batch))throw Error('Historique GitHub invalide.');
+    commits.push(...batch);if(batch.length<100)break;
+  }
+  return commits.map((entry,index)=>({sha:entry.sha,number:commits.length-index,date:entry.commit.committer?.date||entry.commit.author?.date,title:entry.commit.message.split('\n')[0],author:entry.commit.author?.name||'',url:entry.html_url}));
 }

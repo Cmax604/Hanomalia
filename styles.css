@@ -22,3 +22,11 @@
 .site-shadow{position:fixed;inset:0;z-index:5;pointer-events:none;overflow:hidden;mix-blend-mode:screen}
 .site-shadow::before{content:"";position:absolute;top:0;right:0;width:144vh;height:100%;transform:translateX(50%);background:#a7626bd6;opacity:.075;-webkit-mask:url('assets/skull-original.png') center/contain no-repeat;mask:url('assets/skull-original.png') center/contain no-repeat}
 @media(max-width:700px){.site-shadow::before{width:144svh;opacity:.05}}
+
+/* Keep navigation comfortable on intermediate screen widths. */
+@media(min-width:701px) and (max-width:1000px){
+.site-header{gap:15px}.header-contact{margin-left:auto}
+.menu-toggle{display:flex;align-items:center;gap:10px;order:3;background:#ffffff0b;color:white;border:1px solid #ffffff2b;border-radius:30px;padding:9px 14px;font-size:10px}
+.site-header nav{display:none;position:absolute;top:86px;left:28px;right:28px;padding:26px;border:1px solid #ffffff1f;border-radius:18px;background:#100b10f7;backdrop-filter:blur(20px);flex-direction:column;align-items:flex-start;gap:24px}
+.site-header nav.open{display:flex}
+}

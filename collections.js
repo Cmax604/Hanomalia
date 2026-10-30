@@ -6,7 +6,8 @@ const grid=document.getElementById('merch-grid');
 if(grid){
  const products=Array.isArray(data.merch)?data.merch.filter(product=>product.published!==false):[];
  document.getElementById('merch-note').hidden=products.length>0;
- const entries=products.length?products:[1,2,3].map(i=>({name:'Article '+String(i).padStart(2,'0'),category:'À venir',description:'Nom, prix et tailles à renseigner.',placeholder:true,index:i}));
+ const entries=products;
+ if(!entries.length)grid.append(el('p','product-description','La collection arrive bientôt.'));
  for(const product of entries){
   const card=el('article','product-card');
   const imageUrl=product.image&&safeUrl(product.image);

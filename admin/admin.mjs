@@ -1,5 +1,6 @@
 import {REPOSITORY,CONTENT_PATH,PAGE_NAMES,validateDocument,encodeText,decodeText,publishDocument,referencedUploads,listVersions} from './core.mjs';
 import {readVersion,fetchHistory} from './versions.mjs';
+import {credentialStore} from './auth-storage.mjs';
 if(window.top!==window){document.body.replaceChildren(document.createTextNode('Ouvre l’administration directement dans un onglet pour te connecter.'));throw Error('Administration cannot be embedded');}
 const $=id=>document.getElementById(id);
 const node=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
@@ -7,6 +8,7 @@ let content=null,baselineSha=null,token='',account='',uploads=[],dirty=false,tab
 let restoreCommit=null,expectedHead=null,legacyVersion=false,versionHistory=null,pendingVersion=null;
 let lastPublished=null;const previewUrls=[];
 const endpoint='https://api.github.com/repos/'+REPOSITORY;
+const savedCredential=credentialStore({getItem:key=>localStorage.getItem(key),setItem:(key,value)=>localStorage.setItem(key,value),removeItem:key=>localStorage.removeItem(key)});
 const status=message=>{$('save-status').textContent=message;};
 const error=message=>{$('workspace-error').textContent=message||'';};
 async function github(path,{method='GET',body,publicRequest=false}={}){
@@ -16,7 +18,7 @@ async function github(path,{method='GET',body,publicRequest=false}={}){
  const url=path==='/user'?'https://api.github.com/user':endpoint+path;
  const response=await fetch(url,{method,headers,body:body?JSON.stringify(body):undefined,cache:'no-store',redirect:'error',signal:AbortSignal.timeout(30000)});
  if(!response.ok){const detail=await response.json().catch(()=>({}));let message='GitHub a refusé la demande ('+response.status+').';
- if(response.status===401)message='Clé d’accès invalide ou expirée. Reconnecte-toi avec une clé valide.';
+ if(response.status===401){message='Clé d’accès invalide ou expirée. Reconnecte-toi avec une clé valide.';if(!publicRequest){token='';account='';savedCredential.forget();updateRememberControls();if(content&&!$('workspace').hidden)enterWorkspace();}}
  if(response.status===403)message='Accès refusé. Vérifie que la clé autorise le dépôt Hanomalia avec Contents : Read and write.';
  if(response.status===409||response.status===422)message='La version GitHub a changé ou cette modification est refusée. Exporte ton brouillon puis recharge la version GitHub.';
  if(response.status===404)message='Le dépôt ou le contenu est introuvable avec cette clé. Vérifie les dépôts autorisés.';
@@ -108,8 +110,35 @@ async function pollDeployment(commit){for(let attempt=0;attempt<45;attempt++){aw
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;error('');render();}));
 $('open-draft').addEventListener('click',()=>handle(async()=>{await ensureDraft();enterWorkspace();}));
 $('connect-button').addEventListener('click',()=>{$('welcome').hidden=false;$('workspace').hidden=true;$('access-key').focus();});
-$('login-form').addEventListener('submit',async event=>{event.preventDefault();$('login-error').textContent='';const submit=event.currentTarget.querySelector('button');submit.disabled=true;token=$('access-key').value.trim();$('access-key').value='';try{if(!token)throw Error('Renseigne une clé d’accès GitHub.');const user=await github('/user');const repository=await github('');if(!repository.permissions?.push)throw Error('Ce compte n’a pas le droit de modifier le dépôt Hanomalia.');const remote=await github('/contents/'+CONTENT_PATH+'?ref=main');const remoteDocument=validateDocument(JSON.parse(decodeText(remote.content)));await ensureDraft();if(!dirty){content=remoteDocument;baselineSha=remote.sha;uploads=[];}account=user.login;enterWorkspace();if(dirty&&baselineSha!==remote.sha)error('Le contenu GitHub a changé depuis ce brouillon. Exporte-le puis recharge la version GitHub avant de publier.');}catch(e){token='';account='';$('login-error').textContent=e.message;}finally{submit.disabled=false;}});
-$('logout-button').addEventListener('click',()=>{token='';account='';enterWorkspace();status('Déconnecté. Ton brouillon reste sur cet appareil.');});
+function updateRememberControls(){
+ const remembered=Boolean(savedCredential.read());
+ $('retry-saved-login').hidden=!remembered;$('forget-key').hidden=!remembered;
+}
+async function connect(key,remember){
+ $('login-error').textContent='';const submit=$('login-form').querySelector('button[type="submit"]');submit.disabled=true;$('retry-saved-login').disabled=true;$('open-draft').disabled=true;
+ token=key.trim();$('access-key').value='';let persistenceWarning='';
+ try{
+  if(!token)throw Error('Renseigne une clé d’accès GitHub.');
+  const user=await github('/user');const repository=await github('');
+  if(!repository.permissions?.push)throw Error('Ce compte n’a pas le droit de modifier le dépôt Hanomalia.');
+  const remote=await github('/contents/'+CONTENT_PATH+'?ref=main');const remoteDocument=validateDocument(JSON.parse(decodeText(remote.content)));
+  await ensureDraft();if(!dirty){content=remoteDocument;baselineSha=remote.sha;uploads=[];}
+  account=user.login;
+  if(remember){try{savedCredential.save(token);}catch{savedCredential.forget();persistenceWarning='Connexion réussie, mais ce navigateur ne permet pas de mémoriser la clé. Elle restera active pour cette page uniquement.';}}
+  else savedCredential.forget();
+  enterWorkspace();
+  if(dirty&&baselineSha!==remote.sha)error('Le contenu GitHub a changé depuis ce brouillon. Exporte-le puis recharge la version GitHub avant de publier.');
+  if(persistenceWarning)error(persistenceWarning);
+ }catch(e){
+  token='';account='';
+  if([401,403,404].includes(e.status))savedCredential.forget();
+  $('login-error').textContent=e.message||'La connexion n’a pas pu être établie. Réessaie dans un instant.';
+ }finally{submit.disabled=false;$('retry-saved-login').disabled=false;$('open-draft').disabled=false;updateRememberControls();}
+}
+$('login-form').addEventListener('submit',event=>{event.preventDefault();connect($('access-key').value,$('remember-key').checked);});
+$('retry-saved-login').addEventListener('click',()=>connect(savedCredential.read(),true));
+$('forget-key').addEventListener('click',()=>{savedCredential.forget();$('remember-key').checked=false;updateRememberControls();$('login-error').textContent='Clé oubliée sur cet appareil.';});
+$('logout-button').addEventListener('click',()=>{token='';account='';savedCredential.forget();$('remember-key').checked=false;updateRememberControls();enterWorkspace();status('Déconnecté. La clé a été supprimée de cet appareil. Ton brouillon est conservé.');});
 $('save-draft').addEventListener('click',()=>handle(saveDraft));
 $('publish-button').addEventListener('click',()=>handle(async()=>{if(!token)throw Error('Connecte-toi à GitHub avant de publier.');validateDocument(content);if(!confirm('Publier ce brouillon sur la V2 ? Le site officiel Hanomalia_Band restera inchangé.'))return;busy=true;$('workspace').classList.add('busy');$('publish-button').disabled=true;
  try{await saveDraft();const result=await publishDocument({api:github,document:content,uploads,baselineSha,restoreCommit,expectedHead,onProgress:status});baselineSha=result.contentSha;uploads=[];dirty=false;lastPublished=result.commit;restoreCommit=null;expectedHead=null;legacyVersion=false;versionHistory=null;render();await saveDraft();status('Changements enregistrés · publication en cours…');pollDeployment(result.commit).catch(()=>status('Contenu enregistré. Vérifie la publication dans GitHub Actions.'));}finally{busy=false;$('workspace').classList.remove('busy');$('publish-button').disabled=!token;}}));
@@ -149,3 +178,6 @@ function renderVersions(root){
 }
 window.addEventListener('beforeunload',event=>{if(busy){event.preventDefault();event.returnValue='';}});
 readDraft().then(draft=>{if(draft?.document)$('open-draft').textContent='Reprendre mon brouillon';}).catch(()=>{});
+
+updateRememberControls();
+if(savedCredential.read()){$('remember-key').checked=true;$('login-error').textContent='Reconnexion à GitHub…';connect(savedCredential.read(),true);}

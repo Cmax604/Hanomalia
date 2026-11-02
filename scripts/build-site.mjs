@@ -21,7 +21,7 @@ for(const name of ['index.html','groupe.html','membres.html','live.html','merch.
  html=html.replace(/((?:src|href)=")([^"?]+\.(?:js|css))(?:\?[^\"]*)?"/g,(whole,prefix,file)=>fs.existsSync(path.join(output,file))?prefix+file+'?v='+hash(file)+'"':whole);
  fs.writeFileSync(path.join(output,name),html);
 }
-for(const module of ['admin/versions.mjs','admin/admin.mjs']){const moduleFile=path.join(output,module);fs.writeFileSync(moduleFile,fs.readFileSync(moduleFile,'utf8').replaceAll("'./core.mjs'","'./core.mjs?v="+hash('admin/core.mjs')+"'").replaceAll("'./versions.mjs'","'./versions.mjs?v="+hash('admin/versions.mjs')+"'"));}
+for(const module of ['admin/versions.mjs','admin/admin.mjs']){const moduleFile=path.join(output,module);fs.writeFileSync(moduleFile,fs.readFileSync(moduleFile,'utf8').replaceAll("'./core.mjs'","'./core.mjs?v="+hash('admin/core.mjs')+"'").replaceAll("'./versions.mjs'","'./versions.mjs?v="+hash('admin/versions.mjs')+"'").replaceAll("'./auth-storage.mjs'","'./auth-storage.mjs?v="+hash('admin/auth-storage.mjs')+"'"));}
 for(const name of ['admin/index.html','admin/guide.html']){
  let html=fs.readFileSync(path.join(output,name),'utf8');
  html=html.replace(/((?:src|href)=")(admin\.(?:mjs|css))"/g,(whole,prefix,file)=>prefix+file+'?v='+hash('admin/'+file)+'"');

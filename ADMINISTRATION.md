@@ -14,7 +14,7 @@ Pour travailler localement : `node scripts/build-site.mjs --data-only`, puis ser
 
 ## Connexion
 
-L’interface publique utilise une clé personnelle GitHub fine-grained limitée à `Cmax604/Hanomalia`, permission Contents Read and write. Aucun secret n’est embarqué. La clé n’est conservée qu’en mémoire, jamais dans les brouillons, sauvegardes, URLs ou commits. Le contrôle des droits de publication est effectué par GitHub.
+L’interface publique utilise une clé personnelle GitHub fine-grained limitée à `Cmax604/Hanomalia`, permission Contents Read and write. Aucun secret n’est embarqué. Par défaut, la clé est gardée en mémoire. L’option explicite « Se souvenir de moi sur cet appareil » la conserve dans localStorage (clé dédiée hanomalia-v2-admin-github-key-v1) après validation GitHub, avec reconnexion automatique. Déconnexion, oubli explicite ou refus d’authentification effacent cette copie. Elle reste exclue des brouillons, sauvegardes exportées, aperçus, URLs et commits. Si le stockage local est bloqué, la connexion fonctionne pour la page uniquement. Le contrôle des droits de publication est effectué par GitHub.
 
 Cette version n’utilise pas OAuth : il n’y a pas de serveur d’authentification ou d’abonnement supplémentaire. Le propriétaire crée sa clé dans GitHub ; aucun token ne doit être communiqué à l’agent. `admin/guide.html` détaille la configuration.
 

@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: '22'
       - name: Vérifier les contenus et l’administration
-        run: node --test tests/admin.test.mjs
+        run: node --test tests/*.test.mjs
       - name: Préparer les fichiers publics
         run: |
           node scripts/build-site.mjs

@@ -552,6 +552,20 @@
           "group": "Images du thème (tout le site)",
           "value": "assets/skull-original.png",
           "alt": ""
+        },
+        {
+          "id": "nav-merch-label",
+          "type": "text",
+          "label": "Lien · Merch",
+          "group": "Navigation",
+          "value": "Merch"
+        },
+        {
+          "id": "nav-merch-url",
+          "type": "url",
+          "label": "Destination · Merch",
+          "group": "Navigation",
+          "value": "merch.html"
         }
       ]
     },
@@ -861,6 +875,20 @@
           "label": "Lien · Retour en haut ↑",
           "group": "Pied de page",
           "value": "Retour en haut ↑"
+        },
+        {
+          "id": "nav-merch-label",
+          "type": "text",
+          "label": "Lien · Merch",
+          "group": "Navigation",
+          "value": "Merch"
+        },
+        {
+          "id": "nav-merch-url",
+          "type": "url",
+          "label": "Destination · Merch",
+          "group": "Navigation",
+          "value": "merch.html"
         }
       ]
     },
@@ -1145,6 +1173,20 @@
           "label": "Lien · Retour en haut ↑",
           "group": "Pied de page",
           "value": "Retour en haut ↑"
+        },
+        {
+          "id": "nav-merch-label",
+          "type": "text",
+          "label": "Lien · Merch",
+          "group": "Navigation",
+          "value": "Merch"
+        },
+        {
+          "id": "nav-merch-url",
+          "type": "url",
+          "label": "Destination · Merch",
+          "group": "Navigation",
+          "value": "merch.html"
         }
       ]
     },
@@ -1446,6 +1488,20 @@
           "label": "Lien · Retour en haut ↑",
           "group": "Pied de page",
           "value": "Retour en haut ↑"
+        },
+        {
+          "id": "nav-merch-label",
+          "type": "text",
+          "label": "Lien · Merch",
+          "group": "Navigation",
+          "value": "Merch"
+        },
+        {
+          "id": "nav-merch-url",
+          "type": "url",
+          "label": "Destination · Merch",
+          "group": "Navigation",
+          "value": "merch.html"
         }
       ]
     },
@@ -1635,6 +1691,20 @@
           "label": "Lien · Retour en haut ↑",
           "group": "Pied de page",
           "value": "Retour en haut ↑"
+        },
+        {
+          "id": "nav-merch-label",
+          "type": "text",
+          "label": "Lien · Merch",
+          "group": "Navigation",
+          "value": "Merch"
+        },
+        {
+          "id": "nav-merch-url",
+          "type": "url",
+          "label": "Destination · Merch",
+          "group": "Navigation",
+          "value": "merch.html"
         }
       ]
     },
@@ -1831,6 +1901,20 @@
           "label": "Lien · Retour en haut ↑",
           "group": "Pied de page",
           "value": "Retour en haut ↑"
+        },
+        {
+          "id": "nav-merch-label",
+          "type": "text",
+          "label": "Lien · Merch",
+          "group": "Navigation",
+          "value": "Merch"
+        },
+        {
+          "id": "nav-merch-url",
+          "type": "url",
+          "label": "Destination · Merch",
+          "group": "Navigation",
+          "value": "merch.html"
         }
       ]
     }

@@ -1838,10 +1838,10 @@
   "collections": {
     "merch": [
       {
-        "name": "Casquette",
+        "name": "Casquette trucker",
         "category": "Accessoire",
         "price": "20 €",
-        "image": null,
+        "image": "assets/uploads/1793630532554-aea37dea.webp",
         "description": "",
         "sizes": [],
         "orderUrl": null
@@ -1850,10 +1850,35 @@
         "name": "T-shirt",
         "category": "Vêtement",
         "price": "20 €",
-        "image": null,
+        "image": "assets/uploads/1793630703425-30cb7dc3.webp",
         "description": "",
         "sizes": [],
         "orderUrl": null
+      },
+      {
+        "name": "Stickers Holographique",
+        "category": "",
+        "price": "5 €",
+        "image": "assets/uploads/1793630333367-fd2e7d44.webp",
+        "description": "",
+        "sizes": [
+          "8 x 7",
+          "8cm"
+        ],
+        "orderUrl": null,
+        "available": true,
+        "published": true
+      },
+      {
+        "name": "Nouvel article",
+        "category": "",
+        "price": "",
+        "image": null,
+        "description": "",
+        "sizes": [],
+        "orderUrl": null,
+        "available": true,
+        "published": true
       }
     ],
     "albums": [

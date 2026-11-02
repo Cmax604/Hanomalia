@@ -1847,6 +1847,17 @@
         "orderUrl": null
       },
       {
+        "name": "Sweat à Capuche",
+        "category": "Vêtement",
+        "price": "75 €",
+        "image": "assets/uploads/1793631241560-88e7337a.webp",
+        "description": "",
+        "sizes": [],
+        "orderUrl": null,
+        "available": true,
+        "published": true
+      },
+      {
         "name": "T-shirt",
         "category": "Vêtement",
         "price": "20 €",
@@ -1865,17 +1876,6 @@
           "8 x 7",
           "8cm"
         ],
-        "orderUrl": null,
-        "available": true,
-        "published": true
-      },
-      {
-        "name": "Sweat à Capuche",
-        "category": "Vêtement",
-        "price": "75 €",
-        "image": "assets/uploads/1793631241560-88e7337a.webp",
-        "description": "",
-        "sizes": [],
         "orderUrl": null,
         "available": true,
         "published": true

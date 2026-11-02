@@ -1870,10 +1870,10 @@
         "published": true
       },
       {
-        "name": "Nouvel article",
-        "category": "",
-        "price": "",
-        "image": null,
+        "name": "Sweat à Capuche",
+        "category": "Vêtement",
+        "price": "75 €",
+        "image": "assets/uploads/1793631241560-88e7337a.webp",
         "description": "",
         "sizes": [],
         "orderUrl": null,

@@ -450,7 +450,7 @@
           "type": "text",
           "label": "Titre · Contactez-nous ici",
           "group": "Contact",
-          "value": "Contactez-nous ici"
+          "value": "Contactez-nous ici "
         },
         {
           "id": "text-064",

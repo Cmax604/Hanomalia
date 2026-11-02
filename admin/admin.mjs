@@ -1,4 +1,4 @@
-import {REPOSITORY,CONTENT_PATH,PAGE_NAMES,validateDocument,encodeText,decodeText,publishDocument,referencedUploads,listVersions} from './core.mjs';
+import {REPOSITORY,CONTENT_PATH,PAGE_NAMES,validateDocument,encodeText,decodeText,publishDocument,referencedUploads,listVersions,productPhotos} from './core.mjs';
 import {readVersion,fetchHistory} from './versions.mjs';
 import {credentialStore} from './auth-storage.mjs';
 if(window.top!==window){document.body.replaceChildren(document.createTextNode('Ouvre l’administration directement dans un onglet pour te connecter.'));throw Error('Administration cannot be embedded');}
@@ -89,10 +89,25 @@ function renderPages(root){
 }
 function move(array,index,delta){const target=index+delta;if(target<0||target>=array.length)return;[array[index],array[target]]=[array[target],array[index]];changed();render();}
 function actions(array,index,name){const actions=node('div','small-actions');const up=button('↑',()=>move(array,index,-1),'', 'Monter '+name);up.disabled=index===0;const down=button('↓',()=>move(array,index,1),'','Descendre '+name);down.disabled=index===array.length-1;actions.append(up,down,button('Retirer',()=>{if(confirm('Retirer '+name+' du brouillon ? Le site ne changera qu’après publication.')){array.splice(index,1);changed();render();}},'danger','Retirer '+name));return actions;}
-function renderMerch(root){root.append(node('p','editor-note','Ajoute tes articles, leurs photos, leurs prix et les tailles. Le bouton Commander apparaît uniquement si tu renseignes une destination de commande.'));const list=node('div','cards-list');
- content.collections.merch.forEach((product,index)=>{const card=node('article','card');const top=node('div','card-top');top.append(node('h2','',product.name||'Nouvel article'),actions(content.collections.merch,index,product.name||'cet article'));card.append(top,mediaEditor(product.image,v=>product.image=v,product.name));
+function renderProductPhotos(card,product){
+ card.append(uploadLabel('Ajouter des photos à cet article',async photos=>{
+  if(product.images.length+photos.length>40)throw Error('Un article peut contenir au maximum 40 photos.');
+  for(const photo of photos)product.images.push({src:photo.path,alt:product.name});
+  changed();render();
+ },true));
+ card.append(node('p','hint',product.images.length+' photo'+(product.images.length>1?'s':'')+' · la première est la couverture'));
+ if(!product.images.length)card.append(node('p','editor-note','Aucune photo pour cet article.'));
+ const photosGrid=node('div','album-photo-grid');
+ product.images.forEach((photo,index)=>{
+  const item=node('article','photo-edit');const img=node('img');img.src=previewSource(photo.src);img.alt=photo.alt||product.name;img.loading='lazy';
+  item.append(img,node('p','hint',index===0?'Photo de couverture':'Photo '+(index+1)),actions(product.images,index,'la photo '+(index+1)+' de '+product.name),field('Description de la photo',photo.alt,v=>photo.alt=v),uploadLabel('Remplacer cette photo',async photos=>{photo.src=photos[0].path;changed();render();}));
+  photosGrid.append(item);
+ });card.append(photosGrid);
+}
+function renderMerch(root){root.append(node('p','editor-note','Ajoute tes articles, leurs photos, leurs prix et les tailles. La première photo sert de couverture ; les visiteurs peuvent parcourir les suivantes. Le bouton Commander apparaît uniquement si tu renseignes une destination de commande.'));const list=node('div','cards-list');
+ content.collections.merch.forEach((product,index)=>{product.images=productPhotos(product);product.image=product.images[0]?.src||null;const card=node('article','card');const top=node('div','card-top');top.append(node('h2','',product.name||'Nouvel article'),actions(content.collections.merch,index,product.name||'cet article'));card.append(top);renderProductPhotos(card,product);
  const columns=node('div','two-columns');columns.append(field('Nom de l’article',product.name,v=>product.name=v),field('Catégorie',product.category,v=>product.category=v));const numeric=parseFloat(String(product.price||'').replace(',','.'));columns.append(field('Prix (€)',Number.isFinite(numeric)?numeric:'',v=>product.price=v?Number(v).toFixed(2).replace('.00','')+' €':'',{type:'number',min:0,step:'.01'}),field('Tailles (séparées par des virgules)',(product.sizes||[]).join(', '),v=>product.sizes=v.split(',').map(s=>s.trim()).filter(Boolean)));card.append(columns,field('Description',product.description,v=>product.description=v,{multiline:true}),field('Lien de commande (facultatif)',product.orderUrl,v=>product.orderUrl=v||null),checkbox('Article disponible',product.available!==false,v=>product.available=v),checkbox('Afficher cet article sur le site',product.published!==false,v=>product.published=v));list.append(card);});
- root.append(list,button('+ Ajouter un article',()=>{content.collections.merch.push({name:'Nouvel article',category:'',price:'',image:null,description:'',sizes:[],orderUrl:null,available:true,published:true});changed();render();},'primary add-button'));
+ root.append(list,button('+ Ajouter un article',()=>{content.collections.merch.push({name:'Nouvel article',category:'',price:'',image:null,images:[],description:'',sizes:[],orderUrl:null,available:true,published:true});changed();render();},'primary add-button'));
 }
 function renderGallery(root){root.append(node('p','editor-note','Les événements sont classés du plus récent au plus ancien. Ajoute plusieurs photos à la fois, puis utilise les flèches pour choisir leur ordre. Les couleurs originales sont conservées.'));const list=node('div','cards-list');
  content.collections.albums.forEach((album,index)=>{const card=node('article','card');const top=node('div','card-top');top.append(node('h2','',album.title||'Nouvel événement'),actions(content.collections.albums,index,album.title||'cet événement'));card.append(top);

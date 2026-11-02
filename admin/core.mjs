@@ -8,6 +8,9 @@ export function safeLink(value) {
 export function safeImage(value) {
   return typeof value==='string' && (/^assets\/[a-zA-Z0-9_./ -]+$/.test(value)&&!value.split('/').includes('..') || /^https:\/\//.test(value)&&safeLink(value));
 }
+export function productPhotos(product){
+  return Array.isArray(product.images)?product.images:product.image?[{src:product.image,alt:product.name||''}]:[];
+}
 export function validateDocument(doc) {
   if(!doc||doc.version!==1||!doc.pages||!doc.collections)throw Error('Le fichier de contenu est invalide.');
   for(const name of PAGE_NAMES){
@@ -25,6 +28,8 @@ export function validateDocument(doc) {
   for(const product of merch){
     if(!product.name?.trim())throw Error('Chaque article doit avoir un nom.');
     if(product.image&&!safeImage(product.image))throw Error('Photo invalide : '+product.name);
+    if(product.images!==undefined&&(!Array.isArray(product.images)||product.images.length>40))throw Error('Un article peut contenir au maximum 40 photos : '+product.name);
+    for(const photo of productPhotos(product))if(!photo||!safeImage(photo.src)||(photo.alt!==undefined&&(typeof photo.alt!=='string'||photo.alt.length>1000)))throw Error('Photo d’article invalide : '+product.name);
     if(product.orderUrl&&!safeLink(product.orderUrl))throw Error('Lien de commande invalide : '+product.name);
     if(product.price&&!/^\d+(?:[.,]\d{1,2})?\s*€?$/.test(product.price))throw Error('Prix invalide : '+product.name);
     if(product.sizes&&!Array.isArray(product.sizes))throw Error('Tailles invalides : '+product.name);

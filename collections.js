@@ -4,17 +4,44 @@ const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.cla
 const safeUrl=(value)=>{try{const u=new URL(value,location.href);return (['http:','https:'].includes(u.protocol)||(new URLSearchParams(location.search).get('cms-preview')==='1'&&window.parent!==window&&u.protocol==='blob:'&&u.origin===location.origin))?u.href:null}catch{return null}};
 const grid=document.getElementById('merch-grid');
 if(grid){
+ let productViewer=null;
+ function enlarge(photos,name,start,trigger){
+  if(productViewer)productViewer.remove();
+  const dialog=el('dialog','photo-viewer merch-viewer');dialog.setAttribute('aria-label','Photos de '+name);
+  const top=el('div','viewer-top');top.append(el('p','',name));const close=el('button','','Fermer ×');close.type='button';top.append(close);
+  const stage=el('div','viewer-stage'),prev=el('button','','←'),next=el('button','','→'),photo=el('img');prev.type=next.type='button';prev.setAttribute('aria-label','Photo précédente');next.setAttribute('aria-label','Photo suivante');stage.append(prev,photo,next);
+  const bottom=el('div','viewer-bottom'),caption=el('p'),count=el('p');count.setAttribute('aria-live','polite');bottom.append(caption,count);dialog.append(top,stage,bottom);document.body.append(dialog);productViewer=dialog;
+  let selected=start;const display=()=>{photo.src=photos[selected].src;photo.alt=photos[selected].alt||name;caption.textContent=photos[selected].alt||name;count.textContent=(selected+1)+' / '+photos.length;prev.disabled=next.disabled=photos.length<2;};
+  const step=delta=>{selected=(selected+delta+photos.length)%photos.length;display();};
+  prev.addEventListener('click',()=>step(-1));next.addEventListener('click',()=>step(1));close.addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();step(event.key==='ArrowLeft'?-1:1);}});
+  dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+  dialog.addEventListener('close',()=>{trigger.focus();dialog.remove();productViewer=null;});display();dialog.showModal();
+ }
  const products=Array.isArray(data.merch)?data.merch.filter(product=>product.published!==false):[];
  document.getElementById('merch-note').hidden=products.length>0;
  const entries=products;
  if(!entries.length)grid.append(el('p','product-description','La collection arrive bientôt.'));
  for(const product of entries){
   const card=el('article','product-card');
-  const imageUrl=product.image&&safeUrl(product.image);
-  const visual=el('div',imageUrl?'product-image':'product-placeholder');
-  const image=el('img');image.src=imageUrl||(product.index===2?'assets/skull-original.png':'assets/logo-horizontal-blanc.png');image.alt=imageUrl?product.name:'';image.loading='lazy';visual.append(image);
+  const photos=(Array.isArray(product.images)?product.images:product.image?[{src:product.image,alt:product.name}]:[]).filter(p=>p&&p.src&&safeUrl(p.src));
+  const imageUrl=photos[0]?.src;
+  const visual=el('div',imageUrl?'product-image product-carousel':'product-placeholder');
+  const image=el('img');image.src=imageUrl||(product.index===2?'assets/skull-original.png':'assets/logo-horizontal-blanc.png');image.alt=imageUrl?(photos[0].alt||product.name):'';image.loading='lazy';
+  let thumbnails=null;
+  if(imageUrl){
+   let selected=0;const open=el('button','product-zoom');open.type='button';open.setAttribute('aria-label','Agrandir les photos de '+product.name);open.append(image);open.addEventListener('click',()=>enlarge(photos,product.name,selected,open));visual.append(open);
+   if(photos.length>1){
+    const prev=el('button','product-prev','←'),next=el('button','product-next','→'),counter=el('span','product-counter');prev.type=next.type='button';prev.setAttribute('aria-label','Photo précédente de '+product.name);next.setAttribute('aria-label','Photo suivante de '+product.name);counter.setAttribute('aria-live','polite');
+    thumbnails=el('div','product-thumbnails');thumbnails.setAttribute('role','group');thumbnails.setAttribute('aria-label','Photos de '+product.name);
+    const buttons=[];const show=index=>{selected=(index+photos.length)%photos.length;image.src=photos[selected].src;image.alt=photos[selected].alt||product.name;counter.textContent=(selected+1)+' / '+photos.length;buttons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===selected)));};
+    photos.forEach((photo,index)=>{const thumb=el('button','product-thumbnail');thumb.type='button';thumb.setAttribute('aria-label','Photo '+(index+1)+' de '+product.name);const thumbImage=el('img');thumbImage.src=photo.src;thumbImage.alt='';thumbImage.loading='lazy';thumb.append(thumbImage);thumb.addEventListener('click',()=>show(index));buttons.push(thumb);thumbnails.append(thumb);});
+    prev.addEventListener('click',()=>show(selected-1));next.addEventListener('click',()=>show(selected+1));visual.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();show(selected+(event.key==='ArrowLeft'?-1:1));}});visual.append(prev,next,counter);show(0);
+   }
+  }else visual.append(image);
   if(!imageUrl)visual.append(el('span','','VISUEL À VENIR'));
-  const meta=el('div','product-meta');if(product.category)meta.append(el('span','product-category',product.category));if(product.price)meta.append(el('span','product-price',product.price));card.append(visual,meta,el('h2','',product.name));
+  card.append(visual);if(thumbnails)card.append(thumbnails);
+  const meta=el('div','product-meta');if(product.category)meta.append(el('span','product-category',product.category));if(product.price)meta.append(el('span','product-price',product.price));card.append(meta,el('h2','',product.name));
   if(product.description)card.append(el('p','product-description',product.description));
   if(product.sizes?.length)card.append(el('p','product-sizes','Tailles : '+product.sizes.join(' / ')));
   const orderUrl=product.orderUrl&&safeUrl(product.orderUrl);

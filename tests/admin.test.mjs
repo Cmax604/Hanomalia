@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {fileURLToPath} from 'node:url';
-import {validateDocument,publishDocument,encodeText,decodeText,referencedUploads,safeLink,safeImage,listVersions} from '../admin/core.mjs';
+import {validateDocument,publishDocument,encodeText,decodeText,referencedUploads,safeLink,safeImage,listVersions,productPhotos} from '../admin/core.mjs';
 import {readVersion} from '../admin/versions.mjs';
 const current=JSON.parse(fs.readFileSync(fileURLToPath(new URL('../content/site.json',import.meta.url)),'utf8'));
 const original=structuredClone(current);
@@ -72,4 +72,18 @@ test('restoration uses the historical source tree, preserves administration, and
 });
 test('a changed source head blocks restoration even if content did not change',async()=>{
  const fake=fakeApi();await assert.rejects(()=>publishDocument({api:fake.api,document:clone(),uploads:[],baselineSha:'base-content',restoreCommit:'a'.repeat(40),expectedHead:'older-head'}),/version GitHub a changé/);assert.equal(fake.calls.length,1);
+});
+test('product photos retain legacy covers and respect an explicitly empty image list',()=>{
+ const legacy={name:'Casquette',image:'assets/cover.webp'};
+ assert.deepEqual(productPhotos(legacy),[{src:'assets/cover.webp',alt:'Casquette'}]);
+ assert.deepEqual(productPhotos({...legacy,images:[]}),[]);
+ const ordered=[{src:'assets/back.webp',alt:'Dos'},{src:'assets/front.webp',alt:'Face'}];assert.deepEqual(productPhotos({...legacy,images:ordered}),ordered);
+});
+test('all product images are validated and included in atomic media publication',async()=>{
+ const doc=clone();doc.collections.merch[0].images=[{src:'assets/uploads/front.webp',alt:'Face'},{src:'assets/uploads/back.webp',alt:'Dos'}];
+ validateDocument(doc);assert.deepEqual([...referencedUploads(doc)],['assets/uploads/front.webp','assets/uploads/back.webp']);
+ const fake=fakeApi();await publishDocument({api:fake.api,document:doc,uploads:[{path:'assets/uploads/front.webp',base64:'YWJj'},{path:'assets/uploads/back.webp',base64:'ZGVm'}],baselineSha:'base-content'});
+ assert.equal(fake.calls.filter(c=>c.path==='/git/blobs'&&c.body.encoding==='base64').length,2);
+ doc.collections.merch[0].images[1].src='javascript:bad';assert.throws(()=>validateDocument(doc),/Photo d’article invalide/);
+ doc.collections.merch[0].images=Array.from({length:41},()=>({src:'assets/ok.webp'}));assert.throws(()=>validateDocument(doc),/40 photos/);
 });

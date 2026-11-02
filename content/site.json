@@ -1844,7 +1844,13 @@
         "image": "assets/uploads/1793630532554-aea37dea.webp",
         "description": "",
         "sizes": [],
-        "orderUrl": null
+        "orderUrl": null,
+        "images": [
+          {
+            "src": "assets/uploads/1793630532554-aea37dea.webp",
+            "alt": "Casquette trucker"
+          }
+        ]
       },
       {
         "name": "Sweat à Capuche",
@@ -1855,7 +1861,17 @@
         "sizes": [],
         "orderUrl": null,
         "available": true,
-        "published": true
+        "published": true,
+        "images": [
+          {
+            "src": "assets/uploads/1793631241560-88e7337a.webp",
+            "alt": "Sweat à Capuche"
+          },
+          {
+            "src": "assets/uploads/1793638126161-ac9581d1.webp",
+            "alt": "Sweat à Capuche"
+          }
+        ]
       },
       {
         "name": "T-shirt",
@@ -1864,7 +1880,17 @@
         "image": "assets/uploads/1793630703425-30cb7dc3.webp",
         "description": "",
         "sizes": [],
-        "orderUrl": null
+        "orderUrl": null,
+        "images": [
+          {
+            "src": "assets/uploads/1793630703425-30cb7dc3.webp",
+            "alt": "T-shirt"
+          },
+          {
+            "src": "assets/uploads/1793638185620-abff8cf1.webp",
+            "alt": "T-shirt"
+          }
+        ]
       },
       {
         "name": "Stickers Holographique",
@@ -1878,7 +1904,13 @@
         ],
         "orderUrl": null,
         "available": true,
-        "published": true
+        "published": true,
+        "images": [
+          {
+            "src": "assets/uploads/1793630333367-fd2e7d44.webp",
+            "alt": "Stickers Holographique"
+          }
+        ]
       }
     ],
     "albums": [

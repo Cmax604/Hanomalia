@@ -1922,16 +1922,20 @@
   "collections": {
     "merch": [
       {
-        "name": "Casquette trucker",
+        "name": "Casquette Snapback",
         "category": "Accessoire",
         "price": "20 €",
-        "image": "assets/uploads/1793630532554-aea37dea.webp",
+        "image": "assets/uploads/1793786563254-2f569c75.webp",
         "description": "",
         "sizes": [],
         "orderUrl": null,
         "images": [
           {
-            "src": "assets/uploads/1793630532554-aea37dea.webp",
+            "src": "assets/uploads/1793786563254-2f569c75.webp",
+            "alt": "Casquette trucker"
+          },
+          {
+            "src": "assets/uploads/1793786570971-52b36857.webp",
             "alt": "Casquette trucker"
           }
         ]
